@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solos Pero Preparados™ — Manual Completo de Autonomía y Reserva de 90 Días para Mayores de 65+</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@400;500;600;700;800&display=swap');
+
+    :root {
+      --primary: #1b4332;
+      --primary-dark: #081c15;
+      --primary-soft: #ecfdf5;
+      --accent: #d97706;
+      --accent-dark: #b45309;
+      --danger: #991b1b;
+      --danger-soft: #fef2f2;
+      --bg-page: #ffffff;
+      --text-main: #111827;
+      --text-muted: #4b5563;
+      --border: #cbd5e1;
+    }
+
+    @page {
+      size: A4 portrait;
+      margin: 15mm 16mm 16mm 16mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 13.5pt;
+      line-height: 1.68;
+      color: var(--text-main);
+      background-color: #cbd5e1;
+      margin: 0;
+      padding: 0;
+    }
+
+    .screen-toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+      background: var(--primary-dark);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      font-size: 15px;
+    }
+
+    .screen-toolbar button {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 10px 22px;
+      font-size: 16px;
+      font-weight: 800;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .book-wrapper {
+      max-width: 820px;
+      margin: 24px auto;
+      background: var(--bg-page);
+      padding: 40px 52px;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.2);
+    }
+
+    .chapter-break {
+      page-break-before: always;
+      break-before: page;
+      padding-top: 6px;
+    }
+
+    .no-break,
+    .callout,
+    .callout-danger,
+    .recipe-box,
+    .product-card,
+    .diagram-box,
+    .figure-block,
+    .step-card,
+    .fill-box,
+    table.prep-table tr {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Merriweather', serif;
+      color: var(--primary-dark);
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    p {
+      margin: 0 0 14px 0;
+      text-align: justify;
+    }
+
+    ul, ol {
+      margin: 0 0 18px 0;
+      padding-left: 26px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .cover-page {
+      background: linear-gradient(155deg, #071710 0%, #1b4332 65%, #2d6a4f 100%);
+      color: #ffffff;
+      text-align: center;
+      padding: 48px 38px;
+      border-radius: 14px;
+      border-bottom: 10px solid var(--accent);
+      page-break-after: always;
+      break-after: page;
+    }
+
+    .cover-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 12pt;
+      margin-bottom: 18px;
+    }
+
+    .cover-page h1 {
+      font-size: 32pt;
+      line-height: 1.15;
+      margin: 0 0 14px 0;
+      color: #ffffff;
+    }
+
+    .cover-page h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 15pt;
+      font-weight: 500;
+      color: #d8f3dc;
+      max-width: 640px;
+      margin: 0 auto 24px auto;
+      line-height: 1.45;
+    }
+
+    .cover-img {
+      width: 100%;
+      max-width: 600px;
+      height: 270px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 4px solid var(--accent);
+      margin: 0 auto 24px auto;
+      display: block;
+    }
+
+    .cover-highlights {
+      background: rgba(255,255,255,0.1);
+      border: 2px solid rgba(255,255,255,0.25);
+      border-radius: 12px;
+      padding: 20px 26px;
+      text-align: left;
+      font-size: 12.5pt;
+    }
+
+    .cover-highlights p {
+      text-align: left;
+    }
+
+    .chapter-header {
+      background: var(--primary-dark);
+      color: #ffffff;
+      padding: 22px 28px;
+      border-radius: 12px;
+      border-left: 10px solid var(--accent);
+      margin-bottom: 24px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .chapter-header .ch-num {
+      color: #fde68a;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 11pt;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .chapter-header h2 {
+      color: #ffffff;
+      font-size: 20pt;
+      margin: 0;
+      line-height: 1.25;
+      border: none;
+      padding: 0;
+    }
+
+    h3.sub-section {
+      font-size: 15.5pt;
+      color: var(--primary);
+      border-bottom: 2px solid #d1fae5;
+      padding-bottom: 6px;
+      margin-top: 26px;
+      margin-bottom: 12px;
+    }
+
+    .figure-block {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .figure-block img {
+      width: 100%;
+      max-height: 240px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid var(--border);
+    }
+
+    .figure-caption {
+      font-size: 11pt;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-top: 6px;
+      text-align: center;
+    }
+
+    .callout {
+      background: #fffbeb;
+      border: 2px solid #fcd34d;
+      border-left: 7px solid var(--accent);
+      padding: 18px 22px;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
+    .callout-danger {
+      background: var(--danger-soft);
+      border: 2px solid #fca5a5;
+      border-left: 7px solid var(--danger);
+      padding: 18px 22px;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
+    .recipe-box {
+      background: #f8fafc;
+      border: 2px solid var(--primary);
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin: 18px 0;
+    }
+
+    .recipe-box h4 {
+      margin: 0 0 8px 0;
+      color: var(--primary);
+      font-size: 14pt;
+    }
+
+    .step-card {
+      background: #ffffff;
+      border: 2px solid var(--border);
+      border-left: 6px solid var(--primary);
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 14px;
+    }
+
+    .step-card strong.step-title {
+      color: var(--primary-dark);
+      font-size: 14pt;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    table.prep-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+      font-size: 12pt;
+      border: 2px solid var(--primary);
+    }
+
+    table.prep-table th {
+      background: var(--primary);
+      color: #ffffff;
+      font-weight: 700;
+      text-align: left;
+      padding: 10px 14px;
+      border: 1px solid var(--primary-dark);
+    }
+
+    table.prep-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    table.prep-table tr:nth-child(even) {
+      background: #f8fafc;
+    }
+
+    .product-card {
+      background: #ffffff;
+      border: 3px solid var(--primary);
+      border-radius: 12px;
+      padding: 20px 22px;
+      margin: 22px 0;
+      display: flex;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .product-icon {
+      width: 78px;
+      height: 78px;
+      background: var(--primary-soft);
+      border: 2px solid #10b981;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 38px;
+      flex-shrink: 0;
+    }
+
+    .product-body {
+      flex: 1;
+    }
+
+    .product-badge {
+      display: inline-block;
+      background: #dcfce7;
+      color: #166534;
+      font-weight: 800;
+      font-size: 10pt;
+      padding: 3px 10px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .product-body h4 {
+      margin: 2px 0 6px 0;
+      font-size: 14.5pt;
+      color: var(--primary-dark);
+    }
+
+    .product-body p {
+      margin: 0 0 12px 0;
+      font-size: 12pt;
+      text-align: left;
+    }
+
+    .affiliate-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #ffffff !important;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 12.5pt;
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+
+    .toc-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+    }
+
+    .toc-table td {
+      padding: 10px 8px;
+      border-bottom: 1px dashed var(--border);
+      font-size: 12.5pt;
+    }
+
+    .emergency-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .fill-box {
+      background: #fff;
+      border: 2px solid #1f2937;
+      border-radius: 8px;
+      padding: 14px;
+      font-size: 12pt;
+    }
+
+    .fill-line {
+      border-bottom: 1.5px dotted #6b7280;
+      height: 28px;
+      margin-top: 4px;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+      .screen-toolbar {
+        display: none !important;
+      }
+      .book-wrapper {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="screen-toolbar">
+    <div><strong>EDICIÓN MAESTRA AMPLIADA (ESPAÑOL)</strong> — 10 Capítulos Profundos • Formato A4 Listo para PDF</div>
+    <button onclick="window.print()">🖨️ Guardar PDF Completo / Imprimir</button>
+  </div>
+
+  <div class="book-wrapper">
+
+    <!-- PORTADA -->
+    <div class="cover-page">
+      <span class="cover-badge">Edición Maestra Ampliada • Letra Grande para Mayores de 65+</span>
+      <h1>SOLOS PERO PREPARADOS™</h1>
+      <h2>El Manual Definitivo de Reserva Doméstica de 90 Días, Apagones y Autonomía para Personas Mayores que Viven Lejos de su Familia</h2>
+      <img src="images/style2-blackout.jpg" alt="Portada Solos Pero Preparados" class="cover-img">
+      <div class="cover-highlights">
+        <p style="font-weight:800; color:#fde68a; margin-bottom:10px; font-size:14pt;">OBRA COMPLETA DE 10 CAPÍTULOS QUE INCLUYE:</p>
+        <ul style="margin-bottom:0;">
+          <li><strong>Protocolo de los Primeros 60 Minutos:</strong> Guía minuto a minuto cuando se corta la luz, el agua o la señal móvil.</li>
+          <li><strong>Ingeniería de Agua Sin Cargar Peso:</strong> Reserva a altura de cintura + cómo extraer 150 litros de agua limpia de su termo/calentador.</li>
+          <li><strong>Despensa Saludable para 90 Días y 5 Recetas Sin Cocinar:</strong> Comidas bajas en sal + Plan de compra en 4 semanas.</li>
+          <li><strong>Autonomía Médica y CPAP:</strong> Cómo triplicar la batería de su CPAP, enfriar insulina 14 días sin luz y la Regla del Día 25.</li>
+          <li><strong>Seguridad en Casa sin Taladro, Baño en Seco, Escondites para Efectivo y Protección de Mascotas.</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ÍNDICE GENERAL -->
+    <div>
+      <div class="chapter-header">
+        <span class="ch-num">Guía del Lector e Índice Maestro</span>
+        <h2>Contenido Completo del Manual</h2>
+      </div>
+
+      <p>Esta obra ha sido diseñada específicamente para adultos mayores (de 65 a 85+ años) que viven de forma independiente —ya sea solos, en pareja o lejos de sus hijos y nietos—. Cada protocolo respeta la biomecánica de la edad: proteger su columna lumbar, adaptarse a manos con artritis o pérdida de fuerza, cuidar la tensión arterial y mantener sus aparatos médicos encendidos dentro de casa.</p>
+
+      <table class="toc-table">
+        <tr>
+          <td><strong>Capítulo 1: La Doctrina de Autonomía Senior y el Protocolo de los Primeros 60 Minutos</strong><br><span style="font-size:11pt; color:#4b5563;">1.1 Biomecánica a los 65+ • 1.2 Las 4 Reglas de Oro • 1.3 Guía Minuto a Minuto de la Primera Hora • 1.4 Cómo Evitar la Trampa del Pánico</span></td>
+          <td style="text-align:right; font-weight:700; white-space:nowrap;">Capítulo 1</td>
+        </tr>
+        <tr>
+          <td><strong>Capítulo 2: Ingeniería de Agua para 90 Días "Sin Cargar Peso"</strong><br><span style="font-size:11pt; color:#4b5563;">2.1 Hidratación y Protección Renal • 2.2 Micro-Reserva a Altura de Cintura • 2.3 Cómo Extraer 150 Litros de su Termo/Calentador • 2.4 Tabla de Purificación</span></td>
+          <td style="text-align:right; font-weight:700; white-space:nowrap;">Capítulo 2</td>
+        </tr>
+        <tr>
+          <td><strong>Capítulo 3: Despensa de 90 Días para Artritis e Hipertensión + 5 Recetas Sin Cocinar</strong><br><span style="font-size:11pt; color:#4b5563;">3.1 El Peligro Oculto del Sodio • 3.2 Tabla Maestra 30/60/90 Días • 3.3 Cinco Recetas Nutritivas Sin Fuego ni Luz • 3.4 Trucos para Abrir Botes sin Fuerza</span></td>
+          <td style="text-align:right; font-weight:700; white-space:nowrap;">Capítulo 3</td>
+        </tr>
+        <tr>
+          <td><strong>Capítulo 4: Plan Económico en 4 Semanas para Pensionistas y Rotación Sin Pérdidas</strong><br><span style="font-size:11pt; color:#4b5563;">4.1 Cómo Estocar con Pensión Fija • 4.2 Listas Semanales de Compra • 4.3 El Método del Rotulador Negro • 4.4 Protección contra Humedad y Plagas</span></td>
+          <td style="text-align:right; font-weight:700; white-space:nowrap;">Capítulo 4</td>
+        </tr>
+        <tr>
+          <td><strong>Capítulo 5: Apagones, Batería para CPAP, Prevención de Caídas y Clima Extremo</strong><br><span style="font-size:11pt; color:#4b5563;">5.1 Red de Iluminación Automática en 3 Capas • 5.2 El Secreto para Triplicar la Batería de su CPAP • 5.3 Cómo Sobrevivir a Frío Polar o Calor sin Calefacción</span></td>
+          <td style="text-align:right; font-weight:700; white-space:nowrap;">Capítulo 5</td>
+        </tr>
+        <tr>
+          <td><strong>Capítulo 6: Autonomía de Medicamentos, Insulina sin Nevera, Dientes y Vista</strong><br><span style="font-size:11pt; color:#4b5563;">6.1 La Regla del Día 25 y Guion para su Médico • 6.2 Enfriar Insulina 14 Días sin Luz • 6.3 Receta Exacta del Suero Oral (OMS) • 6.4 Urgencias Dentales y Gafas</span></td>
+          <td style="text-align:right; font-weight:700; white-space:nowrap;">Capítulo 6</td>
+        </tr>
+        <tr>
+          <td><strong>Capítulo 7: Seguridad en Casa Viviendo Solo y Escudo Contra Estafas en Apagones</strong><br><span style="font-size:11pt; color:#4b5563;">7.1 Psicología de Disuasión ("Casa Ocupada") • 7.2 Blindaje de Puertas y Ventanas en 3 Segundos sin Taladro • 7.3 Las 4 Estafas contra Mayores</span></td>
+          <td style="text-align:right; font-weight:700; white-space:nowrap;">Capítulo 7</td>
+        </tr>
+        <tr>
+          <td><strong>Capítulo 8: Higiene de Emergencia, Inodoro en Seco y Control de Infecciones</strong><br><span style="font-size:11pt; color:#4b5563;">8.1 Por Qué Jamás Debe Tirar de la Cisterna • 8.2 Protocolo de Inodoro Limpio con Gel Solidificante • 8.3 Prevención de Infección de Orina sin Ducha</span></td>
+          <td style="text-align:right; font-weight:700; white-space:nowrap;">Capítulo 8</td>
+        </tr>
+        <tr>
+          <td><strong>Capítulo 9: Dinero en Efectivo, Escondites Seguros, Documentos y Mascotas</strong><br><span style="font-size:11pt; color:#4b5563;">9.1 Tabla Exacta de Billetes Pequeños y 3 Escondites Anti-Robo • 9.2 Los 14 Documentos de su Bolsa Ignífuga • 9.3 Protocolo de 90 Días para Perros y Gatos</span></td>
+          <td style="text-align:right; font-weight:700; white-space:nowrap;">Capítulo 9</td>
+        </tr>
+        <tr>
+          <td><strong>Capítulo 10: Código SMS con Hijos Lejanos, Ficha de Nevera y Directorio Completo</strong><br><span style="font-size:11pt; color:#4b5563;">10.1 Por Qué los SMS Pasan Cuando las Llamadas Caen • 10.2 Ficha Imprimible para la Nevera • 10.3 Directorio de los 12 Equipos en Amazon</span></td>
+          <td style="text-align:right; font-weight:700; white-space:nowrap;">Capítulo 10</td>
+        </tr>
+      </table>
+
+      <div class="callout">
+        <strong>Enlaces Interactivos de Entrega a Domicilio:</strong> Todos los equipos ligeros recomendados en este libro incluyen un botón naranja directo a Amazon. Al pulsarlo, podrá consultar el precio actual y recibirlo en la puerta de su casa sin cargar peso.
+      </div>
+    </div>
+
+    <!-- ==========================================
+         CAPÍTULO 1
+    =========================================== -->
+    <div class="chapter-break">
+      <div class="chapter-header">
+        <span class="ch-num">Capítulo 1 • Doctrina de Autonomía Senior</span>
+        <h2>Por Qué Prepararse Diferente a los 65+ y el Protocolo de los Primeros 60 Minutos</h2>
+      </div>
+
+      <h3 class="sub-section">1.1 Por Qué los Consejos Tradicionales de Supervivencia Son Peligrosos Después de los 65 Años</h3>
+      <p>En televisión e internet se repite siempre el mismo consejo: <em>"Prepare una mochila de 25 kilos, compre garrafas de agua de 20 litros, apile cajas de conservas en el sótano y compre un generador de gasolina."</em></p>
+      <p>Si usted tiene 65, 70 u 80 años —y especialmente si vive solo y sus hijos residen en otra ciudad o país—, seguir esos consejos puede llevarle al hospital antes siquiera de que empiece una emergencia. A partir de los 65 años, cuatro factores fisiológicos cambian por completo la estrategia:</p>
+      <ul>
+        <li><strong>Límites de Carga en la Columna Lumbar:</strong> Levantar una garrafa de 20 litros desde el suelo aplica más de 140 kilos de presión sobre los discos lumbares L4-L5. Si sufre un pinzamiento o caída estando solo durante un apagón, nadie podrá ayudarle a levantarse.</li>
+        <li><strong>Equilibrio Vestibular y Visión Nocturna:</strong> Con la edad, la pupila tarda hasta 4 veces más en adaptarse a la oscuridad repentina y el oído interno necesita referencias visuales para mantener el equilibrio. Caminar a oscuras buscando velas es la causa #1 de fractura de cadera en apagones.</li>
+        <li><strong>Fuerza de Agarre y Artritis en las Manos:</strong> Los abrelatas manuales de giro, los botes de cristal al vacío y las cuerdas de arranque de generadores exigen una torsión de muñeca dolorosa o imposible si padece artrosis.</li>
+        <li><strong>Deshidratación Rápida y Sensibilidad Térmica:</strong> El reflejo de la sed disminuye con los años, y medicamentos habituales (para la tensión, diuréticos o corazón) exigen una hidratación constante para no dañar los riñones.</li>
+      </ul>
+
+      <h3 class="sub-section">1.2 Las 4 Reglas de Oro de la Independencia Senior</h3>
+      <div class="step-card">
+        <strong class="step-title">Regla #1: El Límite de 3,5 Kilos por Envase</strong>
+        Jamás almacene agua, comida o equipos en un envase individual que pese más de 3,5 kilos. Si no puede levantarlo cómodamente con una sola mano mientras se apoya con la otra, no debe estar en su casa.
+      </div>
+      <div class="step-card">
+        <strong class="step-title">Regla #2: La Zona Dorada de Cintura a Pecho (75 cm a 125 cm de altura)</strong>
+        Prohibido guardar agua o latas en el suelo (obliga a agacharse) o en estantes altos (obliga a subirse a taburetes o sillas, un riesgo mortal viviendo solo).
+      </div>
+      <div class="step-card">
+        <strong class="step-title">Regla #3: La Prueba de "Un Solo Botón a Oscuras"</strong>
+        Cada linterna, radio, abrelatas y batería de su casa debe encenderse pulsando un solo botón, sin mecheros, cerillas ni combustibles líquidos.
+      </div>
+      <div class="step-card">
+        <strong class="step-title">Regla #4: Su Hogar es su Bote Salvavidas</strong>
+        Salvo orden directa de Bomberos o Protección Civil por incendio o inundación, nunca salga a carreteras colapsadas. Su vivienda preparada es el lugar más seguro y cómodo del mundo.
+      </div>
+
+      <h3 class="sub-section">1.3 Protocolo Minuto a Minuto: Sus Primeros 60 Minutos de Crisis</h3>
+      <p>Cuando se corta la electricidad en todo el barrio o se anuncia una emergencia, los primeros 60 minutos definen su seguridad. Siga esta secuencia con total calma:</p>
+
+      <table class="prep-table">
+        <thead>
+          <tr>
+            <th style="width:22%;">Franja de Tiempo</th>
+            <th>Acciones Exactas Paso a Paso</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Minutos 0–15:<br>Calzado, Luz y Puerta</strong></td>
+            <td>
+              1. <strong>Póngase calzado cerrado con suela antideslizante de inmediato</strong> (nunca camine descalzo ni en calcetines).<br>
+              2. Compruebe que sus luces LED automáticas de enchufe se han encendido en el pasillo y baño.<br>
+              3. Coloque su <strong>Barra de Seguridad Ajustable</strong> bajo el pomo de la puerta principal y cierre ventanas.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Minutos 15–30:<br>Capturar Agua</strong></td>
+            <td>
+              1. Las tuberías municipales suelen mantener presión residual durante 20 a 40 minutos tras caer la red eléctrica.<br>
+              2. Extienda su depósito <strong>WaterBOB</strong> en la bañera (o ponga el tapón en la bañera limpia) y abra el grifo de agua fría al máximo.<br>
+              3. Llene todas sus jarras y ollas de cocina.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Minutos 30–45:<br>SMS a sus Hijos</strong></td>
+            <td>
+              1. No gaste batería intentando hacer llamadas de voz que saturarán su teléfono.<br>
+              2. Envíe un único SMS corto a su contacto familiar: <em>"BIEN 1 — Se cortó la luz aquí, estoy seguro dentro de casa con agua, comida y batería. Volveré a escribir a las 20:00h."</em><br>
+              3. Active el <strong>Modo Ahorro de Batería</strong> en su móvil y baje el brillo de pantalla al 30%.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Minutos 45–60:<br>Nevera y Radio</strong></td>
+            <td>
+              1. <strong>¡No abra la puerta de la nevera ni del congelador!</strong> Una nevera cerrada conserva el frío 4 horas y un congelador lleno hasta 48 horas. Cubra el exterior del congelador con una manta gruesa para aislarlo aún más.<br>
+              2. Encienda su <strong>Radio Solar de Emergencia</strong> para escuchar los boletines oficiales.<br>
+              3. Coloque su <strong>Estación de Energía Portátil</strong> junto a su cama o sillón.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ==========================================
+         CAPÍTULO 2
+    =========================================== -->
+    <div class="chapter-break">
+      <div class="chapter-header">
+        <span class="ch-num">Capítulo 2 • Ingeniería de Agua Sin Dolor de Espalda</span>
+        <h2>El Sistema de Agua de 90 Días "Sin Cargar Peso"</h2>
+      </div>
+
+      <div class="figure-block">
+        <img src="images/style1-split.jpg" alt="Comparación entre garrafa pesada y filtro ligero LifeStraw">
+        <div class="figure-caption">Figura 2.1: Levantar garrafas de 20 kilos (izquierda) lesiona la espalda. Usar botellas de 1 litro a la altura de la cintura junto con filtración de fibra hueca (derecha) garantiza agua pura sin esfuerzo.</div>
+      </div>
+
+      <h3 class="sub-section">2.1 Matemática de Hidratación Senior: Proteja sus Riñones y Tensión</h3>
+      <p>En una persona mayor de 65 años, la deshidratación espesa la sangre rápidamente, provoca bajadas bruscas de tensión al levantarse (mareos y caídas), daña los riñones y causa confusión mental en menos de 24 horas. Además, las pastillas para la hipertensión, el corazón o la diabetes necesitan agua suficiente para metabolizarse sin toxicidad.</p>
+      <p><strong>Su Meta Diaria Mínima:</strong> Usted necesita <strong>2 litros de agua pura al día</strong> para beber y preparar alimentos, más <strong>1 litro</strong> para higiene básica —es decir, <strong>3 litros diarios (270 litros para 90 días)</strong>.</p>
+
+      <h3 class="sub-section">2.2 El Sistema de Micro-Almacenamiento en 3 Capas</h3>
+      <ol>
+        <li><strong>Capa 1 — Botellas de 1 Litro a Altura de Cintura (Primeros 30 Días):</strong> Compre paquetes de botellas de 1 litro (o 500 ml). Abra el plástico en la entrada de casa y reparta las botellas individuales en estantes a la altura de la cintura: encimera de la cocina, estante central de la despensa, aparador del salón y mesita del armario. Cada botella pesa solo <strong>1 kilo</strong> y se abre sin esfuerzo.</li>
+        <li><strong>Capa 2 — Los 100 a 150 Litros Ocultos en su Calentador/Termo (Días 30 a 60):</strong> Si usted tiene un termo eléctrico o acumulador de agua caliente en casa, ¡ya tiene entre 80 y 150 litros de agua potable limpia almacenada dentro!</li>
+        <li><strong>Capa 3 — Depósito de Bañera + Filtro Purificador LifeStraw (Días 60 a 90+):</strong> Con un depósito sellado de bañera y un filtro portátil de 60 gramos, cualquier agua del grifo, del termo o de lluvia se transforma en agua pura al instante.</li>
+      </ol>
+
+      <div class="recipe-box">
+        <h4>🔧 Paso a Paso: Cómo Extraer 100+ Litros de Agua Limpia de su Termo o Calentador</h4>
+        <p>Si se corta el agua de la calle, su termo acumulador guarda decenas de litros de agua limpia. Siga estos 4 pasos seguros:</p>
+        <ol style="margin-bottom:0;">
+          <li><strong>Paso 1 (Apague la Electricidad o el Gas PRIMERO):</strong> Baje el interruptor del cuadro eléctrico correspondiente al termo (o cierre la llave de gas). <em>Jamás vacíe un termo encendido.</em></li>
+          <li><strong>Paso 2 (Deje Enfriar el Agua):</strong> Espere 2 horas para que el agua baje a temperatura tibia y no se queme las manos.</li>
+          <li><strong>Paso 3 (Abra un Grifo de Agua Caliente en la Cocina o Baño):</strong> Gire cualquier grifo de la casa hacia el lado caliente y déjelo abierto. Esto permite que entre aire en la parte superior del tanque y rompa el vacío.</li>
+          <li><strong>Paso 4 (Abra la Válvula de Vaciado Inferior):</strong> En la base del termo hay una llave de vaciado. Coloque una jarra debajo (o conecte una manguera corta limpia) y abra la válvula despacio. Deseche el primer vaso si sale con algo de sedimento y pase el resto por su <strong>filtro LifeStraw</strong>.</li>
+        </ol>
+      </div>
+
+      <h3 class="sub-section">2.3 Tabla Exacta de Potabilización con Gotas de Lejía Apta para Desinfección</h3>
+      <p>Si necesita conservar agua del grifo durante meses o potabilizar agua dudosa sin gastar energía en hervirla, use lejía doméstica normal <strong>sin detergente y sin perfume</strong> (hipoclorito de sodio al 4%–5%):</p>
+
+      <table class="prep-table">
+        <thead>
+          <tr>
+            <th>Volumen de Agua</th>
+            <th>Agua Clara (Gotas de Lejía sin Perfume)</th>
+            <th>Agua Turbia (Filtrar antes con filtro de café)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1 Litro de Agua</strong></td>
+            <td><strong>2 Gotas</strong> de lejía apta para bebida</td>
+            <td><strong>4 Gotas</strong></td>
+          </tr>
+          <tr>
+            <td><strong>5 Litros de Agua</strong></td>
+            <td><strong>10 Gotas</strong> (aprox. media cucharadita de café)</td>
+            <td><strong>20 Gotas</strong></td>
+          </tr>
+          <tr>
+            <td><strong>20 Litros de Agua</strong></td>
+            <td><strong>1 Cucharadita de café rasa (2 ml)</strong></td>
+            <td><strong>2 Cucharaditas de café (4 ml)</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      <p><em>Instrucciones:</em> Remueva bien y deje reposar <strong>30 minutos</strong> antes de beber. Mejor aún: beba o filtre el agua a través de su <strong>LifeStraw</strong>, que retiene el 99,999999% de bacterias y parásitos sin sabor a cloro.</p>
+
+      <div class="product-card">
+        <div class="product-icon">💧</div>
+        <div class="product-body">
+          <span class="product-badge">★ Esencial #1 • Reemplaza 4.000 Botellas</span>
+          <h4>1. Filtro Purificador de Agua LifeStraw (Personal y por Gravedad)</h4>
+          <p>Pesa solo 60 gramos. Su membrana de fibra hueca de 0,2 micras convierte hasta 4.000 litros de agua del grifo, del termo o de lluvia en agua 100% potable sin usar pilas ni cargar peso del supermercado.</p>
+          <a class="affiliate-btn" href="https://www.amazon.com/s?k=LifeStraw+Personal+Water+Filter+Emergency&tag=crydante-20" target="_blank">👉 Ver Precio y Disponibilidad en Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">🛁</div>
+        <div class="product-body">
+          <span class="product-badge">★ Reserva de 370 Litros en Bañera • Con Bomba Manual</span>
+          <h4>2. Depósito Sellado de Agua para Bañera WaterBOB</h4>
+          <p>Bolsa de grado alimentario libre de BPA que se extiende dentro de su bañera. Ante cualquier alerta de corte de suministro, se conecta al grifo y almacena hasta 370 litros en 20 minutos, manteniéndola cerrada y limpia durante semanas.</p>
+          <a class="affiliate-btn" href="https://www.amazon.com/s?k=WaterBOB+Emergency+Drinking+Water+Storage&tag=crydante-20" target="_blank">👉 Ver Depósito WaterBOB en Amazon</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         CAPÍTULO 3
+    =========================================== -->
+    <div class="chapter-break">
+      <div class="chapter-header">
+        <span class="ch-num">Capítulo 3 • Nutrición Saludable y Fácil de Abrir</span>
+        <h2>La Despensa de 90 Días Sin Cocinar y 5 Recetas Sin Electricidad</h2>
+      </div>
+
+      <h3 class="sub-section">3.1 El Peligro Oculto del Exceso de Sal en las Conservas</h3>
+      <p>Muchas sopas de sobre y raciones de emergencia comerciales contienen hasta <strong>2.000 mg de sodio por ración</strong>. En mayores de 65 años con hipertensión o problemas cardíacos, comer alimentos tan salados durante pocos días provoca retención de líquidos, hinchazón de piernas y subidas peligrosas de tensión arterial justo cuando los hospitales están saturados.</p>
+
+      <div class="callout-danger">
+        <strong>EL TRUCO DEL ENJUAGUE DE 15 SEGUNDOS:</strong> Si consume legumbres cocidas de bote o atún en salmuera, escurra el líquido y enjuáguelos con medio vaso de agua durante 15 segundos. ¡Este simple gesto elimina <strong>hasta el 41% del sodio sobrante</strong> al instante!
+      </div>
+
+      <h3 class="sub-section">3.2 Tabla Maestra de Cantidades para 1 Persona Mayor (30 / 60 / 90 Días)</h3>
+      <table class="prep-table">
+        <thead>
+          <tr>
+            <th>Alimento (Bajo en Sal, Fácil Masticación y Abre-Fácil)</th>
+            <th>30 Días</th>
+            <th>60 Días</th>
+            <th>90 Días</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Atún, Salmón y Sardinas en Aceite de Oliva (Con Anilla)</strong><br><em>(El aceite de oliva aporta calorías sanas y Omega-3; ¡no lo tire!)</em></td>
+            <td>15 latas</td>
+            <td>30 latas</td>
+            <td>45 latas</td>
+          </tr>
+          <tr>
+            <td><strong>Pechuga de Pollo o Pavo al Natural en Lata Abre-Fácil</strong></td>
+            <td>10 latas</td>
+            <td>20 latas</td>
+            <td>30 latas</td>
+          </tr>
+          <tr>
+            <td><strong>Legumbres Cocidas Listas para Comer (Garbanzos, Alubias, Lentejas)</strong></td>
+            <td>15 botes</td>
+            <td>30 botes</td>
+            <td>45 botes</td>
+          </tr>
+          <tr>
+            <td><strong>Crema de Cacahuete o Almendras 100% Natural (Sin Sal Añadida)</strong></td>
+            <td>2 botes</td>
+            <td>4 botes</td>
+            <td>6 botes</td>
+          </tr>
+          <tr>
+            <td><strong>Copos de Avena Suaves y Galletas Integrales / Pan Tostado</strong></td>
+            <td>3 paquetes</td>
+            <td>6 paquetes</td>
+            <td>9 paquetes</td>
+          </tr>
+          <tr>
+            <td><strong>Melocotón, Pera y Compota de Manzana (En su Jugo, Sin Azúcar)</strong></td>
+            <td>12 botes/tarrinas</td>
+            <td>24 botes/tarrinas</td>
+            <td>36 botes/tarrinas</td>
+          </tr>
+          <tr>
+            <td><strong>Ciruelas Pasas, Orejones y Pasas</strong><br><em>(Vital: la falta de movimiento en emergencias causa estreñimiento severo)</em></td>
+            <td>3 bolsas</td>
+            <td>6 bolsas</td>
+            <td>9 bolsas</td>
+          </tr>
+          <tr>
+            <td><strong>Leche UHT de Larga Duración o Leche en Polvo Desnatada</strong></td>
+            <td>6 litros</td>
+            <td>12 litros</td>
+            <td>18 litros</td>
+          </tr>
+          <tr>
+            <td><strong>Miel Pura de Abeja + Aceite de Oliva Virgen Extra</strong></td>
+            <td>1 envase c/u</td>
+            <td>2 envases c/u</td>
+            <td>3 envases c/u</td>
+          </tr>
+          <tr>
+            <td><strong>Cubo de Comida Liofilizada de 25 Años de Duración</strong></td>
+            <td>1 cubo</td>
+            <td>1–2 cubos</td>
+            <td>2 cubos</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 class="sub-section">3.3 Cinco Recetas Reconfortantes "Cero Fuego y Cero Electricidad"</h3>
+      <div class="recipe-box">
+        <h4>🥗 Receta 1: Ensalada Mediterránea de Alubias Blancas y Salmón al Aceite de Oliva</h4>
+        <p><strong>Ingredientes:</strong> 1 bote de alubias blancas cocidas (escurridas), 1 lata de salmón o atún en aceite de oliva, orégano o ajo en polvo y 4 galletas integrales troceadas.</p>
+        <p style="margin-bottom:0;"><strong>Preparación:</strong> Mezcle las alubias en un bol con el pescado desmenuzado y vierta por encima el propio aceite de oliva de la lata. Espolvoree orégano y las galletas troceadas. Aporta 38 g de proteína y fibra soluble sin encender el fuego.</p>
+      </div>
+
+      <div class="recipe-box">
+        <h4>🥣 Receta 2: Gachas de Avena Cremosas con Manzana, Miel y Nueces (En Remojo)</h4>
+        <p><strong>Ingredientes:</strong> Media taza de copos de avena suaves, media taza de leche UHT (o agua), 1 tarrina de compota de manzana, 1 cucharadita de miel, canela y 4 nueces o ciruelas pasas picadas.</p>
+        <p style="margin-bottom:0;"><strong>Preparación:</strong> ¡No necesita hervir la avena! Mezcle la avena, la leche y la compota en una taza tapada y déjela reposar <strong>20 minutos</strong> a temperatura ambiente. Los copos absorben el líquido y quedan tiernos, suaves y deliciosos.</p>
+      </div>
+
+      <div class="recipe-box">
+        <h4>🥙 Receta 3: Pastel Suave de Pollo, Garbanzos y Pasas</h4>
+        <p><strong>Preparación:</strong> Aplaste medio bote de garbanzos cocidos con un tenedor hasta formar un puré suave, mezcle con 1 lata de pollo desmenuzado, 1 cucharada de aceite de oliva y un puñado de uvas pasas. Ideal para untar en pan tostado o galletas.</p>
+      </div>
+
+      <div class="recipe-box">
+        <h4>🍯 Receta 4: Cómo Preparar Comida Liofilizada de 25 Años con Agua a Temperatura Ambiente</h4>
+        <p style="margin-bottom:0;">Mucha gente cree que los sobres liofilizados obligan a hervir agua. En realidad, la comida liofilizada <em>ya fue cocinada</em> antes de deshidratarse. Si no tiene gas ni luz, añada agua del tiempo al sobre (o dentro de un termo), ciérrelo y espere <strong>35 a 45 minutos</strong> en lugar de 10 minutos: ¡se rehidrata por completo!</p>
+      </div>
+
+      <h3 class="sub-section">3.4 Cómo Abrir Botes de Cristal y Latas Duras con Artritis</h3>
+      <ul>
+        <li><strong>El Truco de la Cuchara para Romper el Vacío:</strong> Cuando la tapa metálica de un bote de cristal esté dura, no fuerce la muñeca. Introduzca la punta de una cuchara sopera bajo el borde inferior de la tapa y haga una suave palanca hacia afuera hasta oír un pequeño <em>"clic"</em>. Al entrar aire, la tapa gira sola con dos dedos.</li>
+      </ul>
+
+      <div class="product-card">
+        <div class="product-icon">🍲</div>
+        <div class="product-body">
+          <span class="product-badge">★ Dura 25 Años • Sobres Ultraligeros</span>
+          <h4>3. Kit de Comida de Emergencia Liofilizada (ReadyWise / Augason Farms)</h4>
+          <p>Cubo ligero con raciones individuales selladas que se conservan hasta 25 años sin caducar. Sopas, arroz, pasta y desayunos que se hidratan solo con añadir agua.</p>
+          <a class="affiliate-btn" href="https://www.amazon.com/s?k=ReadyWise+Emergency+Food+Supply+Freeze+Dried&tag=crydante-20" target="_blank">👉 Ver Kits de Comida de 25 Años en Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">🥫</div>
+        <div class="product-body">
+          <span class="product-badge">★ Alivio #1 para Manos con Artritis</span>
+          <h4>4. Abrelatas Eléctrico Automático de Un Solo Botón (Kitchen Mama)</h4>
+          <p>Colóquelo sobre cualquier lata, pulse el botón una vez y gira 360 grados cortando la tapa solo y sin dejar bordes filosos. Funciona con pilas AA durante apagones.</p>
+          <a class="affiliate-btn" href="https://www.amazon.com/s?k=Kitchen+Mama+Electric+Can+Opener+Battery&tag=crydante-20" target="_blank">👉 Ver Abrelatas Automático en Amazon</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         CAPÍTULO 4
+    =========================================== -->
+    <div class="chapter-break">
+      <div class="chapter-header">
+        <span class="ch-num">Capítulo 4 • Plan Económico y Gestión de Despensa</span>
+        <h2>Calendario de Compra en 4 Semanas y Rotación Sin Desperdicio</h2>
+      </div>
+
+      <h3 class="sub-section">4.1 Cómo Construir su Reserva con una Pensión o Jubilación Fija</h3>
+      <p>No necesita gastar cientos de euros o dólares en un solo día. Si vive con una pensión mensual fija, aplique la <strong>"Regla de los 25 €/$ por Semana"</strong> durante 4 semanas, añadiendo unos pocos productos extra a su compra normal:</p>
+
+      <table class="prep-table">
+        <thead>
+          <tr>
+            <th>Semana</th>
+            <th>Alimentos a Añadir (~22 a 28 €/$)</th>
+            <th>Equipo Clave a Pedir</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Semana 1:<br>Base de 14 Días</strong></td>
+            <td>
+              • 2 packs de botellas de agua de 1 litro<br>
+              • 8 latas de atún/pollo con anilla<br>
+              • 1 bote de crema de cacahuete natural<br>
+              • 2 cajas de galletas integrales + 1 paquete de avena
+            </td>
+            <td>
+              ✔ <strong>Filtro de Agua LifeStraw</strong><br>
+              ✔ <strong>Luces LED Automáticas de Apagón</strong>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Semana 2:<br>Meta de 30 Días</strong></td>
+            <td>
+              • 8 botes de legumbres cocidas bajas en sal<br>
+              • 6 botes de fruta en su jugo (melocotón/pera)<br>
+              • 2 bolsas de ciruelas pasas y orejones<br>
+              • 1 frasco de miel pura de abeja
+            </td>
+            <td>
+              ✔ <strong>Radio Solar + Manivela + USB</strong><br>
+              ✔ <strong>Abrelatas Automático Kitchen Mama</strong>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Semana 3:<br>Expansión a 60 Días</strong></td>
+            <td>
+              • 10 latas de sopas/guisos bajos en sal con anilla<br>
+              • 4 litros de leche UHT o leche en polvo<br>
+              • 2 cajas de suero oral en sobres (electrolitos)<br>
+              • 2 paquetes de toallitas húmedas + pilas AA/AAA
+            </td>
+            <td>
+              ✔ <strong>Botiquín 300 Piezas + Mantas Térmicas</strong><br>
+              ✔ <strong>Alarma Personal SOS 130dB</strong>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Semana 4:<br>Fortaleza de 90 Días</strong></td>
+            <td>
+              • 8 latas de salmón o sardinas en aceite de oliva<br>
+              • 2 bolsas de nueces/almendras sin sal<br>
+              • 1 botella de aceite de oliva virgen extra<br>
+              • Saco extra de pienso para su mascota (si tiene)
+            </td>
+            <td>
+              ✔ <strong>Cubo de Comida de 25 Años</strong><br>
+              ✔ <strong>Estación Portátil Jackery</strong>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 class="sub-section">4.2 El Sistema del "Rotulador Negro Gigante" (Cero Comida Caducada)</h3>
+      <div class="callout">
+        <strong>La Regla de los 10 Segundos con Rotulador Permanente:</strong> Las fechas de caducidad impresas en las latas son diminutas e imposibles de leer con poca luz. Tenga un rotulador negro grueso en el cajón de la cocina. En cuanto guarde una lata, escriba el mes y año de caducidad en <strong>números gigantes en el frente</strong> (por ejemplo: <code>08 / 28</code>). Coloque las latas nuevas al <strong>FONDO</strong> del estante y deslice las más antiguas hacia <strong>DELANTE</strong>.
+      </div>
+    </div>
+
+    <!-- ==========================================
+         CAPÍTULO 5
+    =========================================== -->
+    <div class="chapter-break">
+      <div class="chapter-header">
+        <span class="ch-num">Capítulo 5 • Apagones, Energía CPAP y Clima Extremo</span>
+        <h2>Energía Médica en Casa, Prevención de Caídas y Frío o Calor Extremo</h2>
+      </div>
+
+      <div class="figure-block">
+        <img src="images/style6-cutaway.jpg" alt="Corte 3D de vivienda senior preparada">
+        <div class="figure-caption">Figura 5.1: Una vivienda senior bien preparada funciona como un refugio autónomo: luces automáticas en pasillos, reserva de agua en bañera, despensa a altura de cintura y batería de litio junto a la cama.</div>
+      </div>
+
+      <h3 class="sub-section">5.1 Red de Iluminación Anti-Caídas en 3 Capas (¡Cero Velas!)</h3>
+      <p><strong>Si vive solo, deshágase de las velas de cera.</strong> Las velas provocan incendios domésticos graves cada invierno. En su lugar, instale hoy esta red en 3 niveles:</p>
+      <ol>
+        <li><strong>Capa 1 (Luces Enchufables Automáticas de Corte de Red):</strong> Déjelas enchufadas en el dormitorio, pasillo, baño y cocina. En la milésima de segundo en que se corta la electricidad de la calle, se encienden solas automáticamente iluminando todo el suelo antes siquiera de que usted salga de la cama.</li>
+        <li><strong>Capa 2 (Linterna Frontal Elástica de Cabeza en su Mesita):</strong> Si usted usa bastón, andador o necesita apoyarse en la pared para caminar seguro, ¡llevar una linterna en la mano le quita su mano de apoyo! Coloque una ligera <strong>linterna frontal elástica</strong> en el cabecero de su cama: al ponérsela en la frente, ilumina hacia donde usted mira y deja <strong>sus dos manos 100% libres</strong>.</li>
+        <li><strong>Capa 3 (Farol/Radio Solar de Mesa):</strong> Se recarga durante el día poniéndolo junto al cristal de una ventana soleada.</li>
+      </ol>
+
+      <h3 class="sub-section">5.2 Máquinas CPAP y el Secreto para Triplicar la Duración de su Batería</h3>
+      <div class="callout">
+        <strong>⚡ EL SECRETO TÉCNICO PARA QUE SU CPAP DURE 4 NOCHES SEGUIDAS:</strong><br>
+        ¿Sabía que el <strong>75% de la electricidad</strong> que consume una máquina CPAP de apnea del sueño NO va al motor de aire, sino a la <strong>placa calefactora del humidificador y al tubo calefactado</strong>?
+        <br><br>
+        Si conecta su CPAP normal (con humidificador caliente encendido) a una estación de batería portátil de 300Wh, la batería se agotará en <strong>1 sola noche (7–8 horas)</strong>.
+        <br>
+        <strong>Qué Hacer en un Apagón:</strong> Entre en el menú de su CPAP y apague el <strong>Humidificador Calefactado (OFF)</strong> y el <strong>Tubo Calefactado (OFF)</strong> (puede dejar agua destilada dentro para humidificación fría pasiva). ¡El consumo cae de 55 Vatios a solo <strong>10–12 Vatios</strong>, permitiendo que la misma batería portátil alimente su CPAP durante <strong>3 a 4 noches completas</strong>!
+      </div>
+
+      <h3 class="sub-section">5.3 Cómo Sobrevivir a Frío Invernal o Calor Extremo Sin Calefacción ni Aire</h3>
+      <ul>
+        <li><strong>En un Apagón de Invierno (Heladas):</strong> No intente calentar toda la casa. Elija el dormitorio más pequeño orientado al sur o al oeste, cierre la puerta y coloque una toalla enrollada bajo la rendija. Pegue una <strong>manta térmica plateada Mylar</strong> en el cristal de la ventana (devuelve el 90% del calor radiante al interior). Duerma siempre con un gorro de lana suave puesto (el 40% del calor corporal se pierde por la cabeza).</li>
+        <li><strong>En una Ola de Calor sin Electricidad:</strong> Coloque un paño húmedo fresco en la nuca y en las muñecas mientras usa un pequeño ventilador USB de 5 Vatios conectado a su batería portátil Jackery.</li>
+      </ul>
+
+      <div class="product-card">
+        <div class="product-icon">📻</div>
+        <div class="product-body">
+          <span class="product-badge">★ Boletines Oficiales + Linterna + Cargador Móvil</span>
+          <h4>5. Radio de Emergencia Solar + Manivela + Batería USB</h4>
+          <p>Su conexión con el mundo cuando caen las antenas móviles, internet y la televisión. Funciona con panel solar, manivela manual o batería interna. Incluye linterna LED potente, sirena SOS y puerto USB para cargar el móvil.</p>
+          <a class="affiliate-btn" href="https://www.amazon.com/s?k=Emergency+NOAA+Weather+Radio+Solar+Crank+Cell+Charger&tag=crydante-20" target="_blank">👉 Ver Radio Solar de Emergencia en Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">🔋</div>
+        <div class="product-body">
+          <span class="product-badge">★ 100% Segura Dentro de Casa • Un Solo Botón</span>
+          <h4>6. Estación de Energía Portátil Jackery Explorer (Sin Gasolina ni Humos)</h4>
+          <p>Enchufe portátil silencioso para tener junto a su cama. Sin gasolina ni gases tóxicos. Alimenta su máquina CPAP, teléfono móvil, lámpara o enfriador médico pulsando un solo botón.</p>
+          <a class="affiliate-btn" href="https://www.amazon.com/s?k=Jackery+Explorer+Portable+Power+Station&tag=crydante-20" target="_blank">👉 Ver Estación de Energía Jackery en Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">💡</div>
+        <div class="product-body">
+          <span class="product-badge">★ Protección Automática Anti-Caídas</span>
+          <h4>7. Pack de Luces LED Enchufables Automáticas para Apagones</h4>
+          <p>Se mantienen enchufadas en la pared. En el mismo segundo en que se corta la luz de su barrio, iluminan automáticamente el pasillo y el baño, y pueden sacarse del enchufe como linterna de mano.</p>
+          <a class="affiliate-btn" href="https://www.amazon.com/s?k=Rechargeable+Emergency+Light+Bulbs+Power+Outage+Plug+In&tag=crydante-20" target="_blank">👉 Ver Luces Automáticas de Apagón en Amazon</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         CAPÍTULO 6
+    =========================================== -->
+    <div class="chapter-break">
+      <div class="chapter-header">
+        <span class="ch-num">Capítulo 6 • Autonomía Médica y Escudo Farmacéutico</span>
+        <h2>Reserva de Medicamentos, Insulina sin Nevera, Dientes y Vista</h2>
+      </div>
+
+      <div class="figure-block">
+        <img src="images/style8-pharmacy.jpg" alt="Mayor marcando el Día 25 en el calendario">
+        <div class="figure-caption">Figura 6.1: Marcar el "Día 25" en su calendario cada mes le permite acumular legalmente varias semanas extra de su medicación vital antes de cualquier desabastecimiento.</div>
+      </div>
+
+      <h3 class="sub-section">6.1 El Método Legal del "Día 25" y Qué Decirle Exactamente a su Médico</h3>
+      <ul>
+        <li><strong>La Ventana de Renovación en el Día 25:</strong> La mayoría de las farmacias, seguros y sistemas de receta electrónica permiten retirar el envase del mes siguiente cuando se ha consumido el 80% de la caja actual (el <strong>Día 25 de cada ciclo de 30 días</strong>). Marque el Día 25 en rojo en su calendario y retire su medicación puntualmente 5 días antes, pero <em>no empiece la caja nueva hasta terminar la última pastilla de la antigua</em>. En 4 meses tendrá <strong>20 días extra de reserva</strong> de sus pastillas de tensión, corazón o tiroides.</li>
+        <li><strong>Guion Palabra por Palabra para su Médico de Cabecera:</strong> En su próxima consulta, dígale con calma:
+          <br><em>"Doctor, vivo solo lejos de mis hijos y me preocupa quedarme sin mi medicación de tensión/corazón si hay un temporal o fallo en las farmacias. ¿Podría extenderme una receta adicional de respaldo para tener un mes de seguridad en casa?"</em></li>
+      </ul>
+
+      <h3 class="sub-section">6.2 Cómo Conservar Insulina y Colirios Fríos Durante 14 Días Sin Electricidad</h3>
+      <p>Si falla la nevera en verano y usted usa insulina o colirios para el glaucoma, <strong>jamás ponga la insulina directamente sobre bloques de hielo</strong> (si se congela, pierde su efecto). Use el enfriamiento evaporativo pasivo:</p>
+      <ul>
+        <li><strong>Estuches Evaporativos de Cristales de Agua (Tipo FRIO) o Vasija de Barro:</strong> Sumergiendo una cartera evaporativa en agua del grifo durante 5 minutos, los cristales internos mantienen la insulina fresca (entre 18°C y 25°C) durante días sin electricidad. Si no tiene cartera evaporativa, introduzca su insulina dentro de una bolsa Ziploc hermética dentro de una <strong>maceta de barro sin esmaltar</strong> colocada sobre un plato con agua y cubierta con un paño húmedo: la evaporación natural del barro reduce la temperatura interior hasta 8°C por debajo del ambiente.</li>
+      </ul>
+
+      <div class="recipe-box">
+        <h4>🩺 Fórmula Salvavidas: Suero de Rehidratación Oral Casero (Fórmula Oficial OMS)</h4>
+        <p>Si sufre diarrea, vómitos o golpe de calor y se le agotan los sobres de farmacia, mezcle con exactitud:</p>
+        <ul style="margin-bottom:0;">
+          <li><strong>1 Litro (4 vasos grandes)</strong> de agua potable limpia</li>
+          <li><strong>6 Cucharaditas rasas de Azúcar</strong> (o miel — la glucosa es indispensable para que el intestino absorba el agua y el sodio)</li>
+          <li><strong>1/2 Cucharadita rasa de Sal fina de mesa</strong>. Beba a pequeños sorbos cada 20 minutos.</li>
+        </ul>
+      </div>
+
+      <h3 class="sub-section">6.3 Urgencias Dentales, Gafas de Repuesto y Audífonos</h3>
+      <ul>
+        <li><strong>Caída de una Funda Dental o Empaste:</strong> Morder un alimento duro durante una crisis puede soltar una corona dental o empaste cuando las clínicas están cerradas. Tenga siempre un tubito de <strong>Cemento Dental Temporal de Farmacia</strong> en su botiquín: se aplica con el dedo en 1 minuto y sella el nervio sin dolor.</li>
+        <li><strong>Gafas y Pilas de Audífono:</strong> Guarde sus gafas de graduación anterior junto a su linterna en la mesita de noche, más un blíster de <strong>60 pilas Zinc-Aire para audífono</strong> (duran 3 años sin quitar el precinto adhesivo).</li>
+      </ul>
+
+      <div class="product-card">
+        <div class="product-icon">🧰</div>
+        <div class="product-body">
+          <span class="product-badge">★ Preparación Médica y Térmica Completa</span>
+          <h4>8. Botiquín de Primeros Auxilios de 300 Piezas + Mantas Térmicas Mylar</h4>
+          <p>Estuche médico organizado con apósitos estériles suaves para piel madura, antisépticos, tijeras médicas, gel para quemaduras y mantas térmicas plateadas que retienen el 90% del calor corporal.</p>
+          <a class="affiliate-btn" href="https://www.amazon.com/s?k=First+Aid+Kit+300+Piece+Emergency+Survival+Blanket&tag=crydante-20" target="_blank">👉 Ver Botiquín Completo en Amazon</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         CAPÍTULO 7
+    =========================================== -->
+    <div class="chapter-break">
+      <div class="chapter-header">
+        <span class="ch-num">Capítulo 7 • Seguridad en Casa y Escudo Anti-Estafas</span>
+        <h2>Cómo Proteger su Hogar Viviendo Solo Durante un Apagón</h2>
+      </div>
+
+      <div class="figure-block">
+        <img src="images/style4-security.jpg" alt="Bloqueo de puerta interior contra falsos operarios">
+        <div class="figure-caption">Figura 7.1: Jamás abra la puerta a falsos técnicos durante un apagón. Encaje una barra de acero ajustable bajo el pomo interior en 3 segundos.</div>
+      </div>
+
+      <h3 class="sub-section">7.1 Psicología de Disuasión: Cómo Hacer Creer que No Vive Solo</h3>
+      <ul>
+        <li><strong>El Truco de las Botas de Trabajo Talla 45:</strong> Compre unas botas de trabajo masculinas grandes de segunda mano, manche un poco la suela con tierra y déjelas en el felpudo exterior junto a un comedero metálico grande de perro. Cualquier intruso pensará al instante que en la casa viven un hombre corpulento y un perro guardián.</li>
+        <li><strong>Voz en la Entrada:</strong> Deje una pequeña radio a pilas sintonizada en una emisora de tertulia a volumen medio cerca del recibidor.</li>
+      </ul>
+
+      <h3 class="sub-section">7.2 Blindaje Físico en 3 Segundos (Sin Taladros ni Herramientas)</h3>
+      <ol>
+        <li><strong>Barra de Acero Bajo el Pomo:</strong> Se apoya en ángulo de 45 grados entre el suelo y el pomo interior de la puerta principal. Resiste hasta 180 kilos de empuje: aunque alguien intente forzar el bombín, la puerta no se abre.</li>
+        <li><strong>Palo de Madera en Puertas Correderas:</strong> Coloque un listón de madera cortado a medida en el riel inferior de sus puertas o ventanas correderas para impedir que se deslicen desde fuera.</li>
+        <li><strong>Sirena Personal SOS de 130 Decibelios:</strong> Tenga una colgada al cuello y otra en su mesita. Al tirar del pasador emite una alarma de 130dB que ahuyenta a intrusos y alerta a todo el vecindario sin necesitar teléfono.</li>
+      </ol>
+
+      <h3 class="sub-section">7.3 Las 4 Estafas de Emergencia Contra Personas Mayores</h3>
+      <div class="callout-danger">
+        <strong>PROHIBIDO ABRIR LA PUERTA EN ESTOS 4 CASOS:</strong><br>
+        <strong>1. El Falso "Inspector de Luz, Agua o Gas":</strong> En los apagones, delincuentes con chalecos reflectantes llaman a las puertas diciendo que deben revisar el cuadro eléctrico o el gas. <strong>Nunca abra.</strong> Hable a través de la puerta cerrada: <em>"Mi hijo está durmiendo en la habitación del fondo, no necesitamos revisión."</em><br>
+        <strong>2. La Falsa "Tasa de Evacuación o Reparación":</strong> Ni la Policía ni Protección Civil cobran jamás dinero en puerta.<br>
+        <strong>3. Estafadores de Tejados tras Tormentas:</strong> Nunca entregue efectivo a desconocidos que digan haber visto tejas rotas.<br>
+        <strong>4. La Llamada del "Nieto en Problemas":</strong> Acuerde hoy mismo una <strong>palabra clave secreta</strong> con sus hijos y nietos para verificar cualquier llamada urgente.
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">🚨</div>
+        <div class="product-body">
+          <span class="product-badge">★ Sirena Ensordecedora de 130dB + Flash LED</span>
+          <h4>9. Alarma Personal SOS de Seguridad (Llavero y Mesita de Noche)</h4>
+          <p>No requiere fuerza en las manos: basta con tirar del pasador para activar una sirena de 130dB audible a 300 metros. Ahuyenta intrusos y avisa a sus vecinos si sufre una caída.</p>
+          <a class="affiliate-btn" href="https://www.amazon.com/s?k=Personal+Safety+Alarm+Seniors+130dB+Siren+LED&tag=crydante-20" target="_blank">👉 Ver Alarma Personal SOS en Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">🚪</div>
+        <div class="product-body">
+          <span class="product-badge">★ Soporta 180 Kilos • Se Coloca en 3 Segundos</span>
+          <h4>10. Barra Ajustable de Seguridad para Puerta Principal y Corredera</h4>
+          <p>Barra de acero de alta resistencia que bloquea el pomo de su puerta desde dentro sin usar tornillos ni taladro. Tranquilidad total para dormir solo durante apagones.</p>
+          <a class="affiliate-btn" href="https://www.amazon.com/s?k=Adjustable+Door+Security+Bar+Stopper+Home+Defense&tag=crydante-20" target="_blank">👉 Ver Barra de Seguridad para Puerta en Amazon</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         CAPÍTULO 8
+    =========================================== -->
+    <div class="chapter-break">
+      <div class="chapter-header">
+        <span class="ch-num">Capítulo 8 • Higiene y Baño Sin Agua Corriente</span>
+        <h2>Inodoro en Seco y Control de Infecciones Cuando Se Corta el Agua</h2>
+      </div>
+
+      <div class="figure-block">
+        <img src="images/style5-toilet.jpg" alt="Uso de polvo gelificante absorbente en el inodoro">
+        <div class="figure-caption">Figura 8.1: Jamás gaste su agua potable en la cisterna. Forre su propio inodoro y utilice sobres de gel coagulante absorbente.</div>
+      </div>
+
+      <h3 class="sub-section">8.1 Por Qué Jamás Debe Echar Agua Potable en la Cisterna</h3>
+      <p>Cada descarga del inodoro gasta entre <strong>6 y 10 litros de agua</strong>. Si usa su reserva de agua potable para tirar de la cisterna 3 veces al día, agotará el agua de beber de todo un mes en solo 3 días. Además, sentarse en cubos de plástico inestables es peligroso para las rodillas y caderas de una persona mayor.</p>
+
+      <h3 class="sub-section">8.2 El Protocolo de "Inodoro en Seco" en su Propia Taza Cómoda</h3>
+      <ol>
+        <li><strong>Paso 1 (Anule la Cisterna):</strong> Cierre la llave de paso del inodoro o pegue cinta adhesiva en el botón de descarga para no pulsarlo por costumbre.</li>
+        <li><strong>Paso 2 (Doble Bolsa en su Taza):</strong> Levante el asiento del inodoro, coloque una bolsa de basura resistente como forro protector y encima una <strong>Bolsa Sanitaria de Emergencia</strong>. Baje el asiento cómodo sobre los bordes de la bolsa.</li>
+        <li><strong>Paso 3 (Sobre de Gel Solidificante):</strong> Eche un sobre de <strong>Polvo Gelificante Absorbente</strong> dentro de la bolsa. Al contacto con el líquido, lo transforma en 15 segundos en un gel sólido e inodoro sin salpicaduras. (<em>Alternativa casera:</em> mezcla al 50% de arena aglomerante para gatos y bicarbonato sódico).</li>
+        <li><strong>Paso 4 (Higiene Corporal Sin Ducha):</strong> Use <strong>Toallitas Corporales Hospitalarias Sin Aclarado</strong> para mantener la piel limpia y prevenir infecciones de orina (ITU), muy frecuentes en mayores cuando falta el agua.</li>
+      </ol>
+
+      <div class="product-card">
+        <div class="product-icon">🧼</div>
+        <div class="product-body">
+          <span class="product-badge">★ Cero Olores • Se Adapta a su Inodoro Normal</span>
+          <h4>11. Bolsas Sanitarias de Emergencia con Gel Absorbente Solidificante</h4>
+          <p>Convierten su propio inodoro en un baño seco higiénico e inodoro durante cortes de agua. Cada bolsa solidifica hasta 1 litro de líquido al instante.</p>
+          <a class="affiliate-btn" href="https://www.amazon.com/s?k=Emergency+Toilet+Bags+Absorbent+Gel+Commode+Liners&tag=crydante-20" target="_blank">👉 Ver Bolsas Sanitarias de Emergencia en Amazon</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         CAPÍTULO 9
+    =========================================== -->
+    <div class="chapter-break">
+      <div class="chapter-header">
+        <span class="ch-num">Capítulo 9 • Escudo Financiero, Documentos y Mascotas</span>
+        <h2>Efectivo en Billetes Pequeños, Escondites y Cuidado de Mascotas</h2>
+      </div>
+
+      <div class="figure-block">
+        <img src="images/style7-flatlay.jpg" alt="Kit organizado en mesa con bolsa ignífuga y billetes pequeños">
+        <div class="figure-caption">Figura 9.1: Kit esencial sobre la mesa: bolsa ignífuga con billetes pequeños, filtro LifeStraw, radio solar, abrelatas de 1 botón, sirena SOS, pastillero de 90 días y botiquín.</div>
+      </div>
+
+      <h3 class="sub-section">9.1 Por Qué los Billetes de 100 Son Inútiles en un Apagón</h3>
+      <p>En cuanto cae la red eléctrica o bancaria, los datáfonos de tarjetas y cajeros dejan de funcionar. Y como las cajas registradoras están apagadas, <strong>las tiendas no tienen cambio para billetes grandes de 50 o 100</strong>. Guarde siempre entre 200 y 400 €/$ siguiendo esta distribución:</p>
+
+      <table class="prep-table">
+        <thead>
+          <tr>
+            <th>Denominación</th>
+            <th>Cantidad Recomendada</th>
+            <th>Por Qué Es Imprescindible</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Monedas de 1 y 2 € / Billetes de $1</strong></td>
+            <td>30 a 40 unidades</td>
+            <td>Pago exacto de pan, agua o artículos básicos sin necesitar cambio.</td>
+          </tr>
+          <tr>
+            <td><strong>Billetes de 5 €/$</strong></td>
+            <td>20 billetes (100 €/$)</td>
+            <td>El billete más valioso en una crisis para farmacias, taxis o vecinos.</td>
+          </tr>
+          <tr>
+            <td><strong>Billetes de 10 y 20 €/$</strong></td>
+            <td>10 billetes (150 €/$)</td>
+            <td>Para compras mayores de alimentos o reparaciones de urgencia.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 class="sub-section">9.2 Dos Escondites Inteligentes Donde los Ladrones Jamás Miran</h3>
+      <ol>
+        <li><strong>La Mitad en su Bolsa Ignífuga:</strong> Junto a la fotocopia de su DNI/Pasaporte, tarjeta sanitaria, escrituras de su vivienda, lista de medicinas y una libreta de papel con los teléfonos de sus hijos escritos a mano.</li>
+        <li><strong>La Mitad en el "Bote Señuelo de Ciruelas Pasas":</strong> Guarde un sobre sellado en el fondo de un bote opaco de copos de avena o una caja de ciruelas pasas en su despensa y rellene la parte superior con avena real. Ningún intruso registra jamás los botes de avena o ciruelas de una persona mayor.</li>
+      </ol>
+
+      <h3 class="sub-section">9.3 Protocolo de 90 Días para su Perro o Gato de Compañía</h3>
+      <ul>
+        <li>Almacene <strong>2 sacos extra de pienso seco</strong> en un cubo hermético a la altura de la cintura y 24 latas con anilla abre-fácil.</li>
+        <li><strong>Estación Higiénica Interior para Tormentas o Ascensores Parados:</strong> Si vive en un piso con ascensor y se corta la luz (o si hay hielo en la calle), tenga un paquete de <strong>Empapadores Absorbentes para Perros</strong> en casa para no arriesgarse a bajar escaleras a oscuras con su mascota.</li>
+      </ul>
+
+      <div class="product-card">
+        <div class="product-icon">📁</div>
+        <div class="product-body">
+          <span class="product-badge">★ Resistente al Fuego (2000°F) y al Agua</span>
+          <h4>12. Bolsa Ignífuga e Impermeable para Documentos y Efectivo</h4>
+          <p>Protege sus billetes pequeños de emergencia, escrituras, DNI, recetas médicas y fotos familiares contra incendios e inundaciones. Con bandas reflectantes para encontrarla a oscuras.</p>
+          <a class="affiliate-btn" href="https://www.amazon.com/s?k=Fireproof+Document+Bag+Waterproof+Money+Pouch&tag=crydante-20" target="_blank">👉 Ver Bolsa Ignífuga en Amazon</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         CAPÍTULO 10
+    =========================================== -->
+    <div class="chapter-break">
+      <div class="chapter-header">
+        <span class="ch-num">Capítulo 10 • Protocolo Familiar y Directorio Maestro</span>
+        <h2>El Código SMS con Hijos Lejanos, Ficha de Nevera y Directorio de Equipos</h2>
+      </div>
+
+      <h3 class="sub-section">10.1 Por Qué los Mensajes SMS Logran Pasar Cuando las Llamadas Fallan</h3>
+      <p>Cuando ocurre una emergencia, las llamadas de voz saturan las antenas en minutos. En cambio, un <strong>mensaje de texto SMS tradicional</strong> (sin depender de internet ni WhatsApp) viaja en un micro-paquete de datos que se cuela por la antena en cuanto hay un milisegundo libre.</p>
+
+      <div class="callout">
+        <strong>📱 COMPARTA HOY ESTE SISTEMA DE 3 CÓDIGOS SMS CON SUS HIJOS:</strong><br>
+        Acuerde dos horas fijas al día (por ejemplo, <strong>9:00 AM y 8:00 PM</strong>) para encender su móvil 5 minutos y enviar uno de estos códigos:<br>
+        • <code>"BIEN 1"</code> = Estoy seguro dentro de casa, puerta bloqueada y con agua, comida y medicinas. No se preocupen ni salgan a la carretera.<br>
+        • <code>"AVISO 2"</code> = No es una urgencia médica grave, pero necesito que un vecino o familiar pase a verme en las próximas 24 horas.<br>
+        • <code>"SOS 3"</code> = Urgencia médica o de seguridad en mi casa. Por favor llamen a emergencias locales o envíen a mi vecino con llave de inmediato.
+      </div>
+
+      <h3 class="sub-section">10.2 Ficha Imprimible para la Puerta de su Nevera</h3>
+      <div class="emergency-grid">
+        <div class="fill-box">
+          <strong>1. MI NOMBRE, FECHA NAC. Y GRUPO SANGUÍNEO:</strong>
+          <div class="fill-line"></div>
+          <div class="fill-line"></div>
+        </div>
+        <div class="fill-box">
+          <strong>2. CONTACTO FAMILIAR PRINCIPAL (Nombre y Tel.):</strong>
+          <div class="fill-line"></div>
+          <div class="fill-line"></div>
+        </div>
+        <div class="fill-box">
+          <strong>3. VECINO DE CONFIANZA CON LLAVE (A 5 Min):</strong>
+          <div class="fill-line"></div>
+          <div class="fill-line"></div>
+        </div>
+        <div class="fill-box">
+          <strong>4. MÉDICO DE CABECERA Y FARMACIA:</strong>
+          <div class="fill-line"></div>
+          <div class="fill-line"></div>
+        </div>
+        <div class="fill-box">
+          <strong>5. MEDICAMENTOS DIARIOS Y HORARIOS:</strong>
+          <div class="fill-line"></div>
+          <div class="fill-line"></div>
+          <div class="fill-line"></div>
+        </div>
+        <div class="fill-box">
+          <strong>6. ALERGIAS, APARATOS Y CUIDADOR DE MASCOTA:</strong>
+          <div class="fill-line"></div>
+          <div class="fill-line"></div>
+          <div class="fill-line"></div>
+        </div>
+      </div>
+
+      <h3 class="sub-section">10.3 Directorio Maestro de los 12 Equipos Recomendados (Amazon)</h3>
+      <table class="prep-table">
+        <thead>
+          <tr>
+            <th>Equipo Recomendado</th>
+            <th>Beneficio Clave para Mayores (65+)</th>
+            <th>Enlace Directo Amazon</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1. Filtro Purificador LifeStraw</strong></td>
+            <td>Purifica 4.000 litros sin cargar garrafas</td>
+            <td><a href="https://www.amazon.com/s?k=LifeStraw+Personal+Water+Filter+Emergency&tag=crydante-20" target="_blank"><strong>Ver en Amazon →</strong></a></td>
+          </tr>
+          <tr>
+            <td><strong>2. Depósito Bañera WaterBOB</strong></td>
+            <td>Reserva limpia de 370L con bomba manual</td>
+            <td><a href="https://www.amazon.com/s?k=WaterBOB+Emergency+Drinking+Water+Storage&tag=crydante-20" target="_blank"><strong>Ver en Amazon →</strong></a></td>
+          </tr>
+          <tr>
+            <td><strong>3. Comida ReadyWise 25 Años</strong></td>
+            <td>Sobres ultraligeros que duran 25 años</td>
+            <td><a href="https://www.amazon.com/s?k=ReadyWise+Emergency+Food+Supply+Freeze+Dried&tag=crydante-20" target="_blank"><strong>Ver en Amazon →</strong></a></td>
+          </tr>
+          <tr>
+            <td><strong>4. Abrelatas Automático 1 Botón</strong></td>
+            <td>Abre latas solo sin forzar muñecas con artritis</td>
+            <td><a href="https://www.amazon.com/s?k=Kitchen+Mama+Electric+Can+Opener+Battery&tag=crydante-20" target="_blank"><strong>Ver en Amazon →</strong></a></td>
+          </tr>
+          <tr>
+            <td><strong>5. Radio Solar + Manivela + USB</strong></td>
+            <td>Alertas oficiales + linterna + cargador móvil</td>
+            <td><a href="https://www.amazon.com/s?k=Emergency+NOAA+Weather+Radio+Solar+Crank+Cell+Charger&tag=crydante-20" target="_blank"><strong>Ver en Amazon →</strong></a></td>
+          </tr>
+          <tr>
+            <td><strong>6. Estación Portátil Jackery</strong></td>
+            <td>Energía en casa sin humo para CPAP y móvil</td>
+            <td><a href="https://www.amazon.com/s?k=Jackery+Explorer+Portable+Power+Station&tag=crydante-20" target="_blank"><strong>Ver en Amazon →</strong></a></td>
+          </tr>
+          <tr>
+            <td><strong>7. Luces Automáticas de Apagón</strong></td>
+            <td>Se encienden solas al cortarse la electricidad</td>
+            <td><a href="https://www.amazon.com/s?k=Rechargeable+Emergency+Light+Bulbs+Power+Outage+Plug+In&tag=crydante-20" target="_blank"><strong>Ver en Amazon →</strong></a></td>
+          </tr>
+          <tr>
+            <td><strong>8. Botiquín 300 Piezas + Manta Térmica</strong></td>
+            <td>Curas completas + retención del 90% del calor</td>
+            <td><a href="https://www.amazon.com/s?k=First+Aid+Kit+300+Piece+Emergency+Survival+Blanket&tag=crydante-20" target="_blank"><strong>Ver en Amazon →</strong></a></td>
+          </tr>
+          <tr>
+            <td><strong>9. Sirena Personal SOS 130dB</strong></td>
+            <td>Avisa a vecinos a 300m sin usar teléfono</td>
+            <td><a href="https://www.amazon.com/s?k=Personal+Safety+Alarm+Seniors+130dB+Siren+LED&tag=crydante-20" target="_blank"><strong>Ver en Amazon →</strong></a></td>
+          </tr>
+          <tr>
+            <td><strong>10. Barra Seguridad para Puerta</strong></td>
+            <td>Soporta 180 kg bajo el pomo sin taladrar</td>
+            <td><a href="https://www.amazon.com/s?k=Adjustable+Door+Security+Bar+Stopper+Home+Defense&tag=crydante-20" target="_blank"><strong>Ver en Amazon →</strong></a></td>
+          </tr>
+          <tr>
+            <td><strong>11. Bolsas Sanitarias Gelificante</strong></td>
+            <td>Inodoro sin agua y sin olores en su propia taza</td>
+            <td><a href="https://www.amazon.com/s?k=Emergency+Toilet+Bags+Absorbent+Gel+Commode+Liners&tag=crydante-20" target="_blank"><strong>Ver en Amazon →</strong></a></td>
+          </tr>
+          <tr>
+            <td><strong>12. Bolsa Ignífuga Documentos</strong></td>
+            <td>Protege efectivo y escrituras hasta 2000°F</td>
+            <td><a href="https://www.amazon.com/s?k=Fireproof+Document+Bag+Waterproof+Money+Pouch&tag=crydante-20" target="_blank"><strong>Ver en Amazon →</strong></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+</body>
+</html>

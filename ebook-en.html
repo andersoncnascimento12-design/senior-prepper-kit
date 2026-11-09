@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alone But Ready™ — Complete 90-Day Senior Self-Reliance & Crisis Manual</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@400;500;600;700;800&display=swap');
+
+    :root {
+      --primary: #1b4332;
+      --primary-dark: #081c15;
+      --primary-soft: #ecfdf5;
+      --accent: #d97706;
+      --accent-dark: #b45309;
+      --danger: #991b1b;
+      --danger-soft: #fef2f2;
+      --bg-page: #ffffff;
+      --text-main: #111827;
+      --text-muted: #4b5563;
+      --border: #cbd5e1;
+    }
+
+    @page {
+      size: A4 portrait;
+      margin: 15mm 16mm 16mm 16mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 13.5pt; /* Ideal Senior Large-Print for A4 PDF pages */
+      line-height: 1.68;
+      color: var(--text-main);
+      background-color: #cbd5e1;
+      margin: 0;
+      padding: 0;
+    }
+
+    .screen-toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+      background: var(--primary-dark);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      font-size: 15px;
+    }
+
+    .screen-toolbar button {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 10px 22px;
+      font-size: 16px;
+      font-weight: 800;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .book-wrapper {
+      max-width: 820px;
+      margin: 24px auto;
+      background: var(--bg-page);
+      padding: 40px 52px;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.2);
+    }
+
+    /* Page Break Controls so nothing is disorganized or cut in half */
+    .chapter-break {
+      page-break-before: always;
+      break-before: page;
+      padding-top: 6px;
+    }
+
+    .no-break,
+    .callout,
+    .callout-danger,
+    .recipe-box,
+    .product-card,
+    .diagram-box,
+    .figure-block,
+    .step-card,
+    .fill-box,
+    table.prep-table tr {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Merriweather', serif;
+      color: var(--primary-dark);
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    p {
+      margin: 0 0 14px 0;
+      text-align: justify;
+    }
+
+    ul, ol {
+      margin: 0 0 18px 0;
+      padding-left: 26px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    /* Cover Design */
+    .cover-page {
+      background: linear-gradient(155deg, #071710 0%, #1b4332 65%, #2d6a4f 100%);
+      color: #ffffff;
+      text-align: center;
+      padding: 48px 38px;
+      border-radius: 14px;
+      border-bottom: 10px solid var(--accent);
+      page-break-after: always;
+      break-after: page;
+    }
+
+    .cover-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 12pt;
+      margin-bottom: 18px;
+    }
+
+    .cover-page h1 {
+      font-size: 34pt;
+      line-height: 1.15;
+      margin: 0 0 14px 0;
+      color: #ffffff;
+    }
+
+    .cover-page h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 15pt;
+      font-weight: 500;
+      color: #d8f3dc;
+      max-width: 640px;
+      margin: 0 auto 24px auto;
+      line-height: 1.45;
+    }
+
+    .cover-img {
+      width: 100%;
+      max-width: 600px;
+      height: 270px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 4px solid var(--accent);
+      margin: 0 auto 24px auto;
+      display: block;
+    }
+
+    .cover-highlights {
+      background: rgba(255,255,255,0.1);
+      border: 2px solid rgba(255,255,255,0.25);
+      border-radius: 12px;
+      padding: 20px 26px;
+      text-align: left;
+      font-size: 12.5pt;
+    }
+
+    .cover-highlights p {
+      text-align: left;
+    }
+
+    /* Chapter Header Banner */
+    .chapter-header {
+      background: var(--primary-dark);
+      color: #ffffff;
+      padding: 22px 28px;
+      border-radius: 12px;
+      border-left: 10px solid var(--accent);
+      margin-bottom: 24px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .chapter-header .ch-num {
+      color: #fde68a;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 11pt;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .chapter-header h2 {
+      color: #ffffff;
+      font-size: 21pt;
+      margin: 0;
+      line-height: 1.25;
+      border: none;
+      padding: 0;
+    }
+
+    h3.sub-section {
+      font-size: 15.5pt;
+      color: var(--primary);
+      border-bottom: 2px solid #d1fae5;
+      padding-bottom: 6px;
+      margin-top: 26px;
+      margin-bottom: 12px;
+    }
+
+    .figure-block {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .figure-block img {
+      width: 100%;
+      max-height: 240px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid var(--border);
+    }
+
+    .figure-caption {
+      font-size: 11pt;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-top: 6px;
+      text-align: center;
+    }
+
+    /* Callouts & Recipe Cards */
+    .callout {
+      background: #fffbeb;
+      border: 2px solid #fcd34d;
+      border-left: 7px solid var(--accent);
+      padding: 18px 22px;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
+    .callout-danger {
+      background: var(--danger-soft);
+      border: 2px solid #fca5a5;
+      border-left: 7px solid var(--danger);
+      padding: 18px 22px;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
+    .recipe-box {
+      background: #f8fafc;
+      border: 2px solid var(--primary);
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin: 18px 0;
+    }
+
+    .recipe-box h4 {
+      margin: 0 0 8px 0;
+      color: var(--primary);
+      font-size: 14pt;
+    }
+
+    .step-card {
+      background: #ffffff;
+      border: 2px solid var(--border);
+      border-left: 6px solid var(--primary);
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 14px;
+    }
+
+    .step-card strong.step-title {
+      color: var(--primary-dark);
+      font-size: 14pt;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    /* Tables */
+    table.prep-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+      font-size: 12pt;
+      border: 2px solid var(--primary);
+    }
+
+    table.prep-table th {
+      background: var(--primary);
+      color: #ffffff;
+      font-weight: 700;
+      text-align: left;
+      padding: 10px 14px;
+      border: 1px solid var(--primary-dark);
+    }
+
+    table.prep-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    table.prep-table tr:nth-child(even) {
+      background: #f8fafc;
+    }
+
+    /* Product Cards (Affiliate) */
+    .product-card {
+      background: #ffffff;
+      border: 3px solid var(--primary);
+      border-radius: 12px;
+      padding: 20px 22px;
+      margin: 22px 0;
+      display: flex;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .product-icon {
+      width: 78px;
+      height: 78px;
+      background: var(--primary-soft);
+      border: 2px solid #10b981;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 38px;
+      flex-shrink: 0;
+    }
+
+    .product-body {
+      flex: 1;
+    }
+
+    .product-badge {
+      display: inline-block;
+      background: #dcfce7;
+      color: #166534;
+      font-weight: 800;
+      font-size: 10pt;
+      padding: 3px 10px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .product-body h4 {
+      margin: 2px 0 6px 0;
+      font-size: 14.5pt;
+      color: var(--primary-dark);
+    }
+
+    .product-body p {
+      margin: 0 0 12px 0;
+      font-size: 12pt;
+      text-align: left;
+    }
+
+    .affiliate-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #ffffff !important;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 12.5pt;
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+
+    .toc-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+    }
+
+    .toc-table td {
+      padding: 10px 8px;
+      border-bottom: 1px dashed var(--border);
+      font-size: 12.5pt;
+    }
+
+    .emergency-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .fill-box {
+      background: #fff;
+      border: 2px solid #1f2937;
+      border-radius: 8px;
+      padding: 14px;
+      font-size: 12pt;
+    }
+
+    .fill-line {
+      border-bottom: 1.5px dotted #6b7280;
+      height: 28px;
+      margin-top: 4px;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+      .screen-toolbar {
+        display: none !important;
+      }
+      .book-wrapper {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="screen-toolbar">
+    <div><strong>COMPLETE EXPANDED MASTER EDITION (ENGLISH)</strong> — 10 In-Depth Chapters • Print-Ready A4 Layout</div>
+    <button onclick="window.print()">🖨️ Save Complete PDF / Print</button>
+  </div>
+
+  <div class="book-wrapper">
+
+    <!-- COVER PAGE -->
+    <div class="cover-page">
+      <span class="cover-badge">Expanded Master Edition • Large Print for Seniors 65+</span>
+      <h1>ALONE BUT READY™</h1>
+      <h2>The Comprehensive 90-Day Home Stockpile, Blackout & Solo-Survival Manual for Older Adults Living Far From Family</h2>
+      <img src="images/style2-blackout.jpg" alt="Senior Preparedness Cover" class="cover-img">
+      <div class="cover-highlights">
+        <p style="font-weight:800; color:#fde68a; margin-bottom:10px; font-size:14pt;">COMPLETE 10-CHAPTER HANDBOOK INCLUDING:</p>
+        <ul style="margin-bottom:0;">
+          <li><strong>The First 60-Minute Crisis Protocol:</strong> Minute-by-minute actions when power, water, or cell service fails.</li>
+          <li><strong>Zero-Lifting Water Engineering:</strong> Waist-high storage + how to drain 40 gallons of pure water hidden inside your water heater.</li>
+          <li><strong>Heart-Safe 90-Day Pantry & 5 No-Cook Senior Recipes:</strong> Low-sodium meals + 4-week fixed-income shopping plan.</li>
+          <li><strong>Medical & CPAP Independence:</strong> Tripling CPAP battery runtime, cooling insulin for 14 days without electricity, and the Day-25 prescription rule.</li>
+          <li><strong>Solo Home Fortification, Dry-Flush Toilet Sanitation, Cash Hiding Spots & Companion Pet Survival.</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TABLE OF CONTENTS & READER'S GUIDE -->
+    <div>
+      <div class="chapter-header">
+        <span class="ch-num">Reference & Master Index</span>
+        <h2>Complete Table of Contents</h2>
+      </div>
+
+      <p>This manual was engineered from the ground up for older adults (ages 65 to 85+) who live independently—whether alone, with a spouse, or hours away from adult children. Every technique in this book respects the physical realities of aging: protecting your lower back, accommodating arthritis or reduced hand grip, managing blood pressure, and keeping life-sustaining medical devices running indoors.</p>
+
+      <table class="toc-table">
+        <tr>
+          <td><strong>Chapter 1: The Solo-Senior Preparedness Doctrine & First 60-Minute Crisis Protocol</strong><br><span style="font-size:11pt; color:#4b5563;">1.1 The Biomechanics of 65+ Survival • 1.2 The 4 Ergonomic Rules • 1.3 Minute-by-Minute First Hour Walkthrough • 1.4 Avoiding the Panic Crowd</span></td>
+          <td style="text-align:right; font-weight:700; white-space:nowrap;">Chapter 1</td>
+        </tr>
+        <tr>
+          <td><strong>Chapter 2: The "Zero-Heavy-Lifting" 90-Day Water Engineering System</strong><br><span style="font-size:11pt; color:#4b5563;">2.1 Senior Hydration & Kidney Math • 2.2 Waist-High Micro-Storage • 2.3 Draining 40 Gallons from Your Water Heater • 2.4 Filtration & Bleach Drop Chart</span></td>
+          <td style="text-align:right; font-weight:700; white-space:nowrap;">Chapter 2</td>
+        </tr>
+        <tr>
+          <td><strong>Chapter 3: The Arthritis-Friendly, Heart-Safe 90-Day Pantry & No-Cook Recipes</strong><br><span style="font-size:11pt; color:#4b5563;">3.1 The High-Sodium Trap • 3.2 Master 30/60/90-Day Quantity Table • 3.3 Five Delicious No-Cook Senior Recipes • 3.4 Arthritis Jar & Can Hacks</span></td>
+          <td style="text-align:right; font-weight:700; white-space:nowrap;">Chapter 3</td>
+        </tr>
+        <tr>
+          <td><strong>Chapter 4: The Fixed-Income 4-Week Shopping Plan & Rotation System</strong><br><span style="font-size:11pt; color:#4b5563;">4.1 Building a Stockpile on Social Security • 4.2 Week-by-Week Cart Lists • 4.3 The Black-Marker FIFO Method • 4.4 Pest & Moisture Shield</span></td>
+          <td style="text-align:right; font-weight:700; white-space:nowrap;">Chapter 4</td>
+        </tr>
+        <tr>
+          <td><strong>Chapter 5: Blackouts, CPAP Medical Power, Fall Prevention & Extreme Weather</strong><br><span style="font-size:11pt; color:#4b5563;">5.1 Nighttime Fall Prevention • 5.2 The 3-Layer Lighting Grid • 5.3 Tripling Your CPAP Battery Life • 5.4 Surviving Winter Freezes & Heat Waves</span></td>
+          <td style="text-align:right; font-weight:700; white-space:nowrap;">Chapter 5</td>
+        </tr>
+        <tr>
+          <td><strong>Chapter 6: Medication Autonomy, Insulin Cooling, Dental & Vision Emergencies</strong><br><span style="font-size:11pt; color:#4b5563;">6.1 The Day-25 Early Refill Rule & Doctor Script • 6.2 Cooling Insulin Without Power • 6.3 Homemade WHO Oral Rehydration Formula • 6.4 Dental, Glasses & Hearing Aids</span></td>
+          <td style="text-align:right; font-weight:700; white-space:nowrap;">Chapter 6</td>
+        </tr>
+        <tr>
+          <td><strong>Chapter 7: Solo Home Security, Physical Fortification & Crisis Scam Defense</strong><br><span style="font-size:11pt; color:#4b5563;">7.1 Occupied-Home Deterrence Tricks • 7.2 No-Drill Door & Window Bracing • 7.3 The 4 Blackout Scams Targeting Seniors</span></td>
+          <td style="text-align:right; font-weight:700; white-space:nowrap;">Chapter 7</td>
+        </tr>
+        <tr>
+          <td><strong>Chapter 8: Emergency Sanitation, Dry-Flush Toilet Setup & Infection Control</strong><br><span style="font-size:11pt; color:#4b5563;">8.1 Why You Must Never Flush Drinking Water • 8.2 The 2-Layer Coagulating Toilet Protocol • 8.3 Preventing UTIs & Skin Infections Without Showers</span></td>
+          <td style="text-align:right; font-weight:700; white-space:nowrap;">Chapter 8</td>
+        </tr>
+        <tr>
+          <td><strong>Chapter 9: Financial Resilience, Secret Cash Hiding Spots & Companion Pet Survival</strong><br><span style="font-size:11pt; color:#4b5563;">9.1 Small-Bill Cash Denominations & 3 Burglar-Proof Hiding Spots • 9.2 The 14-Document Fireproof Binder • 9.3 Complete 90-Day Dog & Cat Protocol</span></td>
+          <td style="text-align:right; font-weight:700; white-space:nowrap;">Chapter 9</td>
+        </tr>
+        <tr>
+          <td><strong>Chapter 10: Distant-Family SMS Code System, Fridge Protocol & Gear Directory</strong><br><span style="font-size:11pt; color:#4b5563;">10.1 Why SMS Beats Voice Calls • 10.2 Printable Fridge Crisis Sheet • 10.3 Complete 12-Item Amazon Equipment Directory</span></td>
+          <td style="text-align:right; font-weight:700; white-space:nowrap;">Chapter 10</td>
+        </tr>
+      </table>
+
+      <div class="callout">
+        <strong>Interactive Home-Delivery Links:</strong> Every piece of senior-friendly equipment recommended in this book includes a direct orange button linked to Amazon. Clicking the button lets you check current prices and order lightweight gear directly to your doorstep—so you never have to carry heavy boxes from a store.
+      </div>
+    </div>
+
+    <!-- ==========================================
+         CHAPTER 1
+    =========================================== -->
+    <div class="chapter-break">
+      <div class="chapter-header">
+        <span class="ch-num">Chapter 1 • The Solo-Senior Rulebook</span>
+        <h2>The Solo-Senior Preparedness Doctrine & Your First 60-Minute Crisis Protocol</h2>
+      </div>
+
+      <h3 class="sub-section">1.1 Why Traditional "Prepper" Advice Is Dangerous After Age 65</h3>
+      <p>Turn on any mainstream survival channel and you will hear the same advice: <em>"Pack a 50-pound bug-out backpack, buy 5-gallon water drums, stack crates of canned beans in the basement, and buy a 7,000-watt gas generator."</em></p>
+      <p>If you are 65, 70, or 80 years old—and especially if you live alone far from your children—following that advice can put you in the emergency room before a crisis even begins. As we age, four physiological changes fundamentally alter how we must prepare:</p>
+      <ul>
+        <li><strong>Spinal & Joint Load Limits:</strong> Lifting a 42-pound (5-gallon) water jug from the floor places over 300 pounds of shear force on your L4–L5 lumbar discs. If you pull your back while living alone during a blackout, no one is there to help you off the floor.</li>
+        <li><strong>Vestibular Balance & Night Blindness:</strong> After age 65, our eyes take 3 to 4 times longer to adjust to sudden darkness, and our inner-ear balance relies heavily on visual horizons. Walking down a dark hallway to search for candles is the #1 cause of broken hips during power outages.</li>
+        <li><strong>Hand Grip & Wrist Torque (Arthritis):</strong> Manual rotary can openers, stubborn vacuum-sealed glass jars, and pull-cord gas generators require high wrist torque that can be painful or impossible with osteoarthritis.</li>
+        <li><strong>Faster Dehydration & Thermal Vulnerability:</strong> Older adults have a blunted thirst reflex and lose body heat faster in winter freezes (or overheat faster in summer grid failures), especially when taking beta-blockers, diuretics, or blood pressure medications.</li>
+      </ul>
+
+      <h3 class="sub-section">1.2 The 4 Golden Rules of Solo-Senior Independence</h3>
+      <div class="step-card">
+        <strong class="step-title">Rule #1: The 8-Pound (3.5 kg) Single-Container Limit</strong>
+        Never store water, food, or equipment in a single container that weighs more than a gallon of milk (8 lbs). If you can't lift it effortlessly with one hand while holding a counter or cane with the other, it does not belong in your plan.
+      </div>
+      <div class="step-card">
+        <strong class="step-title">Rule #2: The Waist-to-Chest Storage Zone (30" to 50" High)</strong>
+        Never store heavy emergency supplies on the floor (which forces you to bend over) or on high cabinet shelves (which tempts you to stand on a chair or step-stool—a deadly fall risk when living alone).
+      </div>
+      <div class="step-card">
+        <strong class="step-title">Rule #3: The "One-Button, In-the-Dark" Test</strong>
+        Every flashlight, radio, can opener, and backup battery in your home must operate with a single button press. Never rely on tools that require threading small parts, striking matches, or pouring liquid fuel.
+      </div>
+      <div class="step-card">
+        <strong class="step-title">Rule #4: Never Evacuate Unless Ordered by Local Fire/Police</strong>
+        For a senior living alone, getting stuck on a gridlocked highway without bathrooms, shade, or medical power is far more dangerous than staying inside a well-stocked home. Your home is your lifeboat.
+      </div>
+
+      <h3 class="sub-section">1.3 Minute-by-Minute Protocol: Your First 60 Minutes of a Crisis</h3>
+      <p>When the power grid fails, water pressure drops, or an emergency alert sounds on television, anxiety spikes during the first hour. Do not rush. Follow this exact 60-minute sequence calmly:</p>
+
+      <table class="prep-table">
+        <thead>
+          <tr>
+            <th style="width:22%;">Time Window</th>
+            <th>Exact Actions to Take (Step-by-Step)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Minutes 0–15:<br>Shoes, Light & Lock</strong></td>
+            <td>
+              1. <strong>Put on sturdy, closed-toe shoes immediately</strong> (never walk in socks or loose slippers during an emergency).<br>
+              2. Verify your plug-in automatic blackout lights are glowing in the hallway and bathroom.<br>
+              3. Wedge your adjustable <strong>Door Security Bar</strong> under your front doorknob and lock all ground-floor windows.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Minutes 15–30:<br>Capture Water Pressure</strong></td>
+            <td>
+              1. Municipal water pipes often keep residual pressure for 20–40 minutes after a grid failure before electric pumping stations stop.<br>
+              2. Lay your <strong>WaterBOB liner</strong> in the bathtub (or plug the clean tub drain) and turn the cold faucet on full blast.<br>
+              3. Fill your kitchen kettles and water pitchers.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Minutes 30–45:<br>Distant-Family SMS</strong></td>
+            <td>
+              1. Do <strong>not</strong> waste your phone battery making long voice calls.<br>
+              2. Send one short SMS text message to your designated family contact: <em>"OK 1 — Power is out here, I am locked inside safe with food, water, and battery power. Will text again at 7 PM."</em><br>
+              3. Put your smartphone into <strong>Low Power / Battery Saver Mode</strong> and dim screen brightness to 30%.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Minutes 45–60:<br>Cold Chain & Radio</strong></td>
+            <td>
+              1. Do <strong>not</strong> open your refrigerator or freezer door! A closed fridge keeps food cold for 4 hours; a full closed freezer holds temperature for 48 hours. Throw a thick blanket over the outside of your freezer to insulate it further.<br>
+              2. Turn on your <strong>NOAA Solar/Crank Weather Radio</strong> to listen to official municipal bulletins.<br>
+              3. Move your <strong>Portable Power Station</strong> next to your bed or armchair.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 class="sub-section">1.4 Avoiding the "Panic Crowd" Trap</h3>
+      <p>Within 30 minutes of a major warning or blackout, local supermarkets, pharmacies, and gas stations descend into chaos. Parking lots become bumper-to-bumper traps, tempers flare, and store shelves are stripped bare. Seniors are frequently knocked over in crowded aisles during panic buying. Because you have followed this manual in advance, <strong>you will stay safely inside your home with a cup of tea while the crowd fights over the last pack of bottled water.</strong></p>
+    </div>
+
+    <!-- ==========================================
+         CHAPTER 2
+    =========================================== -->
+    <div class="chapter-break">
+      <div class="chapter-header">
+        <span class="ch-num">Chapter 2 • Water Engineering Without Back Pain</span>
+        <h2>The "Zero-Heavy-Lifting" 90-Day Water System</h2>
+      </div>
+
+      <div class="figure-block">
+        <img src="images/style1-split.jpg" alt="Never lift heavy 5-gallon jugs; use lightweight filtration">
+        <div class="figure-caption">Figure 2.1: Lifting 42-lb water jugs (left) is a major cause of back injury in seniors. Small 1-liter bottles combined with hollow-fiber filtration (right) provide 90 days of pure water with zero spinal strain.</div>
+      </div>
+
+      <h3 class="sub-section">2.1 Senior Hydration Math: Why Dehydration Is Enemy #1</h3>
+      <p>In younger adults, mild dehydration merely causes a headache. In adults over 65, dehydration rapidly thickens the blood, causes sudden drops in blood pressure upon standing (orthostatic hypotension, leading to fainting and falls), triggers acute kidney injury, and causes sudden confusion or delirium that mimics dementia. Furthermore, blood pressure pills, diuretics ("water pills"), and diabetes medications require consistent daily hydration to process safely through your kidneys and liver.</p>
+      <p><strong>Your Minimum Daily Target:</strong> You need <strong>2 liters (half a gallon)</strong> of pure water per day strictly for drinking and preparing food, plus <strong>1 liter</strong> for basic hygiene and washing—totaling <strong>3 liters (0.8 gallons) per day</strong>, or roughly <strong>270 liters (72 gallons) for a full 90-day crisis</strong>.</p>
+
+      <h3 class="sub-section">2.2 The Waist-High Micro-Storage Strategy</h3>
+      <p>How do you store 72 gallons of water without turning your living room into a warehouse or lifting heavy barrels? You divide and conquer using three effortless layers:</p>
+      <ol>
+        <li><strong>Layer 1 — Waist-High 1-Liter Bottles (First 30 Days):</strong> Buy packs of standard 1-liter (or 16.9oz / 500ml) bottled water. Unpack the plastic case immediately at your front door using a small rolling kitchen cart, and place individual bottles at waist-to-chest height along the back of your kitchen counter, inside the middle shelf of your pantry, on your dining room sideboard, and on a sturdy table inside your bedroom closet. A 1-liter bottle weighs just <strong>2.2 pounds</strong>—anyone can open and pour it with one hand.</li>
+        <li><strong>Layer 2 — Your Hidden 40-Gallon Household Tank (Days 30–60):</strong> Most seniors don't realize they already have 30 to 50 gallons of pure, treated drinking water sitting inside their utility closet right now: <strong>your home Water Heater tank!</strong></li>
+        <li><strong>Layer 3 — Bathtub Liner + Hollow-Fiber Filtration (Days 60–90+):</strong> Using a sealed bathtub bladder (100 gallons) and a 2-ounce hollow-fiber water filter straw/pitcher turns any tap, bathtub, or collected rainwater into sterile drinking water.</li>
+      </ol>
+
+      <div class="recipe-box">
+        <h4>🔧 Step-by-Step: How to Safely Drain 40 Gallons of Pure Water From Your Water Heater</h4>
+        <p>If municipal tap water stops flowing, your hot water tank holds 30 to 50 gallons of clean freshwater. Follow these 4 steps safely:</p>
+        <ol style="margin-bottom:0;">
+          <li><strong>Step 1 (Turn Off Power/Gas FIRST):</strong> Flip the circuit breaker labeled "Water Heater" to OFF (for electric heaters) or turn the gas valve dial to "PILOT / OFF" (for gas heaters). <em>Never drain a tank while the heating element is on.</em></li>
+          <li><strong>Step 2 (Let It Cool):</strong> Wait 2 hours so the water inside cools to warm room temperature and you don't scald your hands.</li>
+          <li><strong>Step 3 (Open a Hot Water Faucet Upstairs/In Kitchen):</strong> Flip any sink faucet in your house to the "HOT" position. This lets air into the top of the tank so water flows smoothly out the bottom (breaking the vacuum).</li>
+          <li><strong>Step 4 (Open the Bottom Drain Valve):</strong> At the bottom of your water heater is a brass spigot (just like an outdoor garden hose faucet). Attach a short clean hose—or hold a 1-liter pitcher underneath—and turn the valve counterclockwise to fill your containers! (If the first cup looks slightly rusty from sediment at the very bottom, discard the first cup and filter the rest through your <strong>LifeStraw</strong>).</li>
+        </ol>
+      </div>
+
+      <h3 class="sub-section">2.3 Emergency Water Purification Chart (Bleach Drops & Filtration)</h3>
+      <p>If you ever have to drink water that has been sitting in an open container, rainwater, or questionable tap water after a main break, you have two ways to make it 100% biologically safe without boiling (saving your stove power):</p>
+
+      <table class="prep-table">
+        <thead>
+          <tr>
+            <th>Volume of Water</th>
+            <th>Clear Water (Unscented Household Bleach 6%–8.25%)</th>
+            <th>Cloudy Water (Filter Through Coffee Filter First)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1 Liter / 1 Quart</strong></td>
+            <td><strong>2 Drops</strong> of unscented liquid bleach</td>
+            <td><strong>4 Drops</strong> of unscented liquid bleach</td>
+          </tr>
+          <tr>
+            <td><strong>1 Gallon (3.8 Liters)</strong></td>
+            <td><strong>8 Drops</strong> (approx. 1/8 teaspoon)</td>
+            <td><strong>16 Drops</strong> (approx. 1/4 teaspoon)</td>
+          </tr>
+          <tr>
+            <td><strong>5 Gallons (19 Liters)</strong></td>
+            <td><strong>1/2 Teaspoon</strong></td>
+            <td><strong>1 Full Teaspoon</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      <p><em>Instructions:</em> Stir the water after adding unscented bleach and let it stand for <strong>30 minutes</strong> before drinking. It should have a very faint chlorine smell. Better yet, sip or pour it through a <strong>LifeStraw filter</strong>, which physically blocks 99.999999% of bacteria (E. coli, Salmonella) and 99.999% of parasites (Giardia, Cryptosporidium) with zero chemicals!</p>
+
+      <div class="product-card">
+        <div class="product-icon">💧</div>
+        <div class="product-body">
+          <span class="product-badge">★ #1 Senior Water Essential • Replaces 4,000 Bottles</span>
+          <h4>1. LifeStraw Personal & Gravity Water Filter System</h4>
+          <p>Weighs only 2 ounces! Uses advanced hollow-fiber membrane technology (0.2-micron pores) to turn up to 1,000 gallons of questionable tap, water-heater, or rainwater into pure drinking water—without pumping, batteries, or lifting heavy cases from the store.</p>
+          <a class="affiliate-btn" href="https://www.amazon.com/s?k=LifeStraw+Personal+Water+Filter+Emergency&tag=crydante-20" target="_blank">👉 Check Price & Availability on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">🛁</div>
+        <div class="product-body">
+          <span class="product-badge">★ 100-Gallon Bathtub Reserve • Includes Siphon Pump</span>
+          <h4>2. WaterBOB Emergency Drinking Water Storage Bladder</h4>
+          <p>A heavy-duty, BPA-free food-grade bladder that unfolds inside any standard bathtub. When a storm or grid alert is issued, slip the sleeve over your tub faucet and fill up to 100 gallons in 20 minutes. Keeps water sealed from dust and includes a hand pump to fill pitchers effortlessly.</p>
+          <a class="affiliate-btn" href="https://www.amazon.com/s?k=WaterBOB+Emergency+Drinking+Water+Storage&tag=crydante-20" target="_blank">👉 View WaterBOB Reserve on Amazon</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         CHAPTER 3
+    =========================================== -->
+    <div class="chapter-break">
+      <div class="chapter-header">
+        <span class="ch-num">Chapter 3 • Arthritis-Friendly, Heart-Safe Nutrition</span>
+        <h2>The 90-Day No-Cook Senior Pantry & 5 Zero-Electricity Recipes</h2>
+      </div>
+
+      <h3 class="sub-section">3.1 The Silent Danger of High-Sodium "Survival Rations"</h3>
+      <p>Many commercial survival food kits and cheap canned soups contain <strong>1,200mg to 2,200mg of sodium in a single serving</strong>. For an older adult with hypertension, congestive heart failure, or kidney sensitivity, eating high-sodium rations for even 4 days causes fluid retention, swollen ankles, shortness of breath, and dangerous blood pressure spikes—at the exact time when ambulances and hospitals may be unreachable.</p>
+
+      <div class="callout-danger">
+        <strong>THE 30-SECOND CAN-RINSING TRICK:</strong> If you ever have to eat standard canned beans, vegetables, or tuna packed in salted water, pour the liquid out through a strainer and rinse the contents with 1/2 cup of water for 15 seconds. Clinical nutrition studies show this simple rinse removes <strong>up to 41% of the excess sodium</strong> immediately!
+      </div>
+
+      <h3 class="sub-section">3.2 Master 1-Person Senior Stockpile Quantity Table (30 / 60 / 90 Days)</h3>
+      <p>Every item in this table was selected for three criteria: <strong>(1) Can be eaten right out of the container with zero cooking</strong>, <strong>(2) Easy on dentures/sensitive teeth and digestion</strong>, and <strong>(3) Shelf life of 1 to 25 years</strong>:</p>
+
+      <table class="prep-table">
+        <thead>
+          <tr>
+            <th>Food Item (Heart-Safe & Easy-Open)</th>
+            <th>30 Days</th>
+            <th>60 Days</th>
+            <th>90 Days</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Pull-Tab Tuna, Wild Salmon & Sardines in Olive Oil</strong><br><em>(Olive oil provides healthy calories & Omega-3s; never drain the oil!)</em></td>
+            <td>15 cans</td>
+            <td>30 cans</td>
+            <td>45 cans</td>
+          </tr>
+          <tr>
+            <td><strong>Pull-Tab White Chunk Chicken or Turkey Breast</strong></td>
+            <td>10 cans</td>
+            <td>20 cans</td>
+            <td>30 cans</td>
+          </tr>
+          <tr>
+            <td><strong>Low-Sodium Canned Beans (Cannellini, Chickpeas, Black Beans)</strong></td>
+            <td>15 cans</td>
+            <td>30 cans</td>
+            <td>45 cans</td>
+          </tr>
+          <tr>
+            <td><strong>Natural Creamy Peanut Butter or Almond Butter (Unsalted)</strong></td>
+            <td>2 jars (16oz)</td>
+            <td>4 jars</td>
+            <td>6 jars</td>
+          </tr>
+          <tr>
+            <td><strong>Quick-Cooking Rolled Oats & Whole-Grain Crackers</strong></td>
+            <td>3 canisters</td>
+            <td>6 canisters</td>
+            <td>9 canisters</td>
+          </tr>
+          <tr>
+            <td><strong>Canned Peaches, Pears & Applesauce (In 100% Juice, No Sugar Added)</strong></td>
+            <td>12 cans/cups</td>
+            <td>24 cans/cups</td>
+            <td>36 cans/cups</td>
+          </tr>
+          <tr>
+            <td><strong>Dried Prunes, Apricots & Raisins</strong><br><em>(Critical: low-activity emergency diets cause severe constipation in seniors!)</em></td>
+            <td>3 bags</td>
+            <td>6 bags</td>
+            <td>9 bags</td>
+          </tr>
+          <tr>
+            <td><strong>Shelf-Stable Milk Boxes (UHT Parmalat) or Non-Fat Dry Milk Powder</strong></td>
+            <td>6 quarts</td>
+            <td>12 quarts</td>
+            <td>18 quarts</td>
+          </tr>
+          <tr>
+            <td><strong>Pure Raw Honey + Extra-Virgin Olive Oil</strong></td>
+            <td>1 bottle each</td>
+            <td>2 bottles each</td>
+            <td>3 bottles each</td>
+          </tr>
+          <tr>
+            <td><strong>25-Year Freeze-Dried Emergency Meal Bucket</strong></td>
+            <td>1 bucket</td>
+            <td>1–2 buckets</td>
+            <td>2 buckets</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 class="sub-section">3.3 Five Delicious "Zero-Cook, Zero-Electricity" Senior Recipes</h3>
+      <p>Eating cold food straight from a tin can for weeks is depressing and causes "appetite fatigue" in older adults. Here are 5 comforting, nutritious meals you can prepare in 3 minutes with <strong>zero electricity and zero stove heat</strong>:</p>
+
+      <div class="recipe-box">
+        <h4>🥗 Recipe 1: Mediterranean White Bean & Salmon Bistro Bowl</h4>
+        <p><strong>Ingredients:</strong> 1 pull-tab can of low-sodium Cannellini (white) beans (drained), 1 pouch or pull-tab can of wild salmon or tuna in olive oil, 1 tablespoon dried Italian herbs or garlic powder, and 4 crushed whole-grain crackers.</p>
+        <p style="margin-bottom:0;"><strong>How to Prepare:</strong> Pour the white beans into a bowl. Flake the salmon and pour its rich olive oil right over the beans. Sprinkle with herbs and crushed crackers for crunch. Provides 38g of protein, heart-healthy fats, and soluble fiber with zero cooking!</p>
+      </div>
+
+      <div class="recipe-box">
+        <h4>🥣 Recipe 2: "Overnight Soaked" Apple-Cinnamon & Honey Oatmeal</h4>
+        <p><strong>Ingredients:</strong> 1/2 cup Quick Oats, 1/2 cup shelf-stable milk (or water), 1 individual cup of unsweetened applesauce, 1 teaspoon raw honey, cinnamon, and 4 chopped walnuts or prunes.</p>
+        <p style="margin-bottom:0;"><strong>How to Prepare:</strong> You do NOT need boiling water to make soft oatmeal! Stir the quick oats, milk/water, and applesauce together in a covered mug or jar. Let it sit for <strong>20 minutes</strong> at room temperature (or overnight). The oats absorb the liquid and become creamy, soft, and delicious.</p>
+      </div>
+
+      <div class="recipe-box">
+        <h4>🥙 Recipe 3: Savory Chicken, Chickpea & Olive Oil Mash</h4>
+        <p><strong>Ingredients:</strong> 1 pull-tab can of white chunk chicken, 1/2 can of chickpeas, 1 tablespoon olive oil (or mayo packet), a pinch of black pepper, and dried cranberries or raisins.</p>
+        <p style="margin-bottom:0;"><strong>How to Prepare:</strong> Mash the chickpeas lightly with a fork, mix in the shredded chicken, olive oil, and raisins. Serve on crackers or soft tortillas.</p>
+      </div>
+
+      <div class="recipe-box">
+        <h4>🍯 Recipe 4: High-Energy "Thermos-Steeped" Freeze-Dried Soup</h4>
+        <p><strong>How to Prepare Freeze-Dried Pouches Without Boiling Water:</strong> Most people think 25-year freeze-dried meals require boiling water. In reality, freeze-dried food is <em>already fully cooked</em> before being dehydrated! If you have no stove power, simply add room-temperature water to the pouch (or inside an insulated thermos), seal it shut, and wait <strong>35 to 45 minutes</strong> instead of 10 minutes. It rehydrates completely!</p>
+      </div>
+
+      <h3 class="sub-section">3.4 Opening Stubborn Cans & Jars With Weak Grip or Arthritis</h3>
+      <ul>
+        <li><strong>The Spoon-Lever Vacuum Trick for Glass Jars:</strong> When a peanut butter or pasta sauce jar lid is stuck tight, do not twist your wrist! Slide the tip of a metal butter knife or sturdy spoon underneath the bottom edge of the metal lid and gently pry outward until you hear a tiny <em>"pop!"</em> That releases the vacuum seal, and the lid spins off with two fingers.</li>
+        <li><strong>One-Touch Battery Can Openers:</strong> Always keep a battery-operated hands-free can opener on your counter with 4 spare AA lithium batteries taped inside the pantry door.</li>
+      </ul>
+
+      <div class="product-card">
+        <div class="product-icon">🍲</div>
+        <div class="product-body">
+          <span class="product-badge">★ 25-Year Shelf Life • Featherlight Pouches</span>
+          <h4>3. ReadyWise / Augason Farms Emergency Food Supply Bucket</h4>
+          <p>Lightweight, stackable bucket filled with individual meal pouches (soups, rice, pasta, oatmeal) that stay fresh for up to 25 years. Rehydrates with warm or room-temperature water—ultimate peace of mind in your closet.</p>
+          <a class="affiliate-btn" href="https://www.amazon.com/s?k=ReadyWise+Emergency+Food+Supply+Freeze+Dried&tag=crydante-20" target="_blank">👉 Check 25-Year Food Kits on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">🥫</div>
+        <div class="product-body">
+          <span class="product-badge">★ #1 Arthritis & Weak-Grip Lifesaver</span>
+          <h4>4. Kitchen Mama One-Touch Automatic Battery Can Opener</h4>
+          <p>Set it on top of any can, press the button once, and it walks 360 degrees around the lid automatically and stops by itself. Leaves smooth, safe edges with zero wrist twisting and works during total power outages.</p>
+          <a class="affiliate-btn" href="https://www.amazon.com/s?k=Kitchen+Mama+Electric+Can+Opener+Battery&tag=crydante-20" target="_blank">👉 See One-Touch Can Opener on Amazon</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         CHAPTER 4
+    =========================================== -->
+    <div class="chapter-break">
+      <div class="chapter-header">
+        <span class="ch-num">Chapter 4 • Fixed-Income Strategy & Pantry Management</span>
+        <h2>The 4-Week Budget Shopping Plan & Zero-Waste Rotation</h2>
+      </div>
+
+      <h3 class="sub-section">4.1 Building Your 90-Day Reserve on a Fixed Pension or Social Security</h3>
+      <p>One of the biggest myths in emergency preparedness is that you need $1,000 upfront. If you live on a fixed retirement income, spending a large sum at once creates financial stress. Instead, use the <strong>"$25-a-Week Rule"</strong> over 4 weeks. By adding just 6 to 8 extra non-perishable items to your regular grocery trip (or Amazon Pantry delivery) each week, you build a complete emergency reserve in 30 days without touching your savings.</p>
+
+      <table class="prep-table">
+        <thead>
+          <tr>
+            <th>Week</th>
+            <th>Grocery Items to Add (~$22–$28)</th>
+            <th>Priority Equipment to Order</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Week 1:<br>The 14-Day Foundation</strong></td>
+            <td>
+              • 2 packs of 1-liter bottled water<br>
+              • 8 cans pull-tab tuna or chunk chicken<br>
+              • 1 jar natural peanut butter (16oz)<br>
+              • 2 boxes whole-grain crackers + 1 canister quick oats
+            </td>
+            <td>
+              ✔ <strong>LifeStraw Water Filter</strong><br>
+              ✔ <strong>Plug-In Automatic Outage Lights</strong>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Week 2:<br>The 30-Day Milestone</strong></td>
+            <td>
+              • 8 cans low-sodium beans (white beans, chickpeas)<br>
+              • 6 cans fruit in 100% juice (peaches/pears)<br>
+              • 2 bags dried prunes & apricots<br>
+              • 1 bottle pure raw honey
+            </td>
+            <td>
+              ✔ <strong>NOAA Solar + Crank Weather Radio</strong><br>
+              ✔ <strong>Kitchen Mama One-Touch Opener</strong>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Week 3:<br>The 60-Day Expansion</strong></td>
+            <td>
+              • 10 cans low-sodium soups/stews with pull-tabs<br>
+              • 4 quarts shelf-stable UHT milk or dry milk powder<br>
+              • 2 boxes electrolyte oral rehydration packets<br>
+              • 2 packs unscented baby wipes + 1 pack AA/AAA batteries
+            </td>
+            <td>
+              ✔ <strong>300-Piece First Aid + Thermal Blankets</strong><br>
+              ✔ <strong>130dB Personal SOS Siren Alarm</strong>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Week 4:<br>The 90-Day Fortress</strong></td>
+            <td>
+              • 8 cans wild salmon or sardines in olive oil<br>
+              • 2 bags unsalted almonds/walnuts<br>
+              • 1 bottle extra-virgin olive oil<br>
+              • Extra 30-day bag of pet food (if applicable)
+            </td>
+            <td>
+              ✔ <strong>25-Year Freeze-Dried Food Bucket</strong><br>
+              ✔ <strong>Jackery Indoor Power Station</strong>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 class="sub-section">4.2 The "Giant Black Marker" Rotation System (Never Waste a Penny)</h3>
+      <p>Have you ever squinted at a tin can trying to read a tiny, stamped gray expiration date in dim light? Standard factory expiration stamps are nearly invisible to 65+ eyes.</p>
+      <div class="callout">
+        <strong>The 10-Second Sharpie Rule:</strong> Keep a thick black permanent marker (Sharpie) in your kitchen drawer. The moment groceries arrive at your door, write the expiration month and year in <strong>giant 2-inch numbers across the front or top of every can</strong> (for example: <code>08 / 28</code>). Place new cans at the <strong>BACK</strong> of the waist-high shelf, and slide older cans to the <strong>FRONT</strong>. Eat from the front once a week, and your stockpile stays 100% fresh forever!
+      </div>
+
+      <h3 class="sub-section">4.3 Protecting Your Pantry From Pests, Humidity & Heat</h3>
+      <ul>
+        <li><strong>Never Store Paper Boxes Directly on Wood or Concrete:</strong> Cardboard boxes of oatmeal, crackers, and powdered milk absorb moisture and attract pantry moths or silverfish. Transfer paper-packaged items into cheap <strong>airtight snap-lid plastic food containers</strong> or heavy-duty 1-gallon freezer Ziploc bags with 2 bay leaves taped inside (bay leaves naturally repel pantry weevils!).</li>
+        <li><strong>Keep Away from the Oven and Dishwasher:</strong> Never store emergency cans or medications in the cabinet directly above your stove or next to your dishwasher. Heat and steam cut the shelf life of food and vitamins in half.</li>
+      </ul>
+    </div>
+
+    <!-- ==========================================
+         CHAPTER 5
+    =========================================== -->
+    <div class="chapter-break">
+      <div class="chapter-header">
+        <span class="ch-num">Chapter 5 • Blackouts, CPAP Power & Extreme Weather</span>
+        <h2>Indoor Medical Power, Fall Prevention & Surviving Without Heating or AC</h2>
+      </div>
+
+      <div class="figure-block">
+        <img src="images/style6-cutaway.jpg" alt="3D Cutaway of Senior Blackout-Proof Home">
+        <div class="figure-caption">Figure 5.1: A properly prepared senior home operates as a self-contained lifeboat—with automatic hallway lighting, bathtub water reserve, waist-high pantry, and indoor lithium battery power.</div>
+      </div>
+
+      <h3 class="sub-section">5.1 The 3-Layer Anti-Fall Lighting Grid (Zero Candles!)</h3>
+      <p>Let us be crystal clear: <strong>If you live alone, throw away your emergency candles.</strong> Every winter and storm season, hundreds of seniors suffer tragic house fires because a candle was knocked over by a sleeve, a curtain, or a pet—or suffer broken hips walking in the dark to find matches. Instead, install this permanent 3-layer automatic grid today:</p>
+      <ol>
+        <li><strong>Layer 1 (Automatic Wall-Socket Outage Lights):</strong> Plug these into your bedroom, hallway, bathroom, and kitchen outlets. They draw pennies of electricity per year and stay charged. The split-second grid power fails, internal sensors switch them on automatically, bathing your walking path in bright LED light before you even get out of bed.</li>
+        <li><strong>Layer 2 (Hands-Free LED Headlamp on Your Bedpost):</strong> If you walk with a cane, a walker, or hold onto hallway railings/walls for balance, carrying a heavy flashlight occupies your stabilizing hand! Keep a lightweight <strong>elastic LED headlamp</strong> hanging on your bedpost. Slip it over your forehead—now wherever you look is brightly lit, and <strong>both of your hands remain 100% free</strong> to hold railings, open doors, or prepare food.</li>
+        <li><strong>Layer 3 (Solar + Hand-Crank Lantern/Radio):</strong> Keep on your nightstand or kitchen table for all-night room illumination that recharges by sitting on a sunny windowsill during the day.</li>
+      </ol>
+
+      <h3 class="sub-section">5.2 CPAP Machines, Medical Devices & The "300% Battery Secret"</h3>
+      <p>Over 30% of seniors use a <strong>CPAP or BiPAP machine</strong> for sleep apnea, a nebulizer for COPD/asthma, or an electric mini-cooler for medications. When the grid goes down, trying to sleep without your CPAP causes severe blood oxygen drops, morning migraines, and heart strain.</p>
+
+      <div class="callout">
+        <strong>⚡ THE SECRET TO TRIPLING YOUR CPAP BATTERY RUNTIME:</strong><br>
+        Did you know that <strong>75% of the electricity</strong> used by a CPAP machine does NOT go to the air blower—it goes to the <strong>heated humidifier plate and heated hose</strong>?
+        <br><br>
+        If you plug a standard CPAP (with heated humidifier ON) into a 300Wh portable power station, the battery will drain in just <strong>1 night (7–8 hours)</strong>.
+        <br>
+        <strong>What to Do in a Blackout:</strong> Go into your CPAP settings menu and turn <strong>Heated Humidifier = OFF</strong> and <strong>Heated Tube = OFF</strong> (you can still leave distilled water in the chamber for passive cool humidity). Your CPAP power draw drops from 55 Watts down to just <strong>10–12 Watts</strong>—allowing the exact same portable battery station to run your CPAP for <strong>3 to 4 full nights</strong> on a single charge!
+      </div>
+
+      <h3 class="sub-section">5.3 Surviving Extreme Winter Freezes or Summer Heat Waves Without HVAC</h3>
+      <p>When power fails during a winter blizzard or a 100°F summer heatwave, trying to heat or cool an entire house is impossible. Use the <strong>"Single-Room Micro-Climate" Protocol</strong>:</p>
+      <ul>
+        <li><strong>In a Winter Freeze (Below 40°F / 4°C Indoors):</strong> Pick the smallest bedroom that faces south or west. Close the doors to all other rooms and stuff rolled bath towels under the door crack. Tape a <strong>silver Mylar thermal emergency blanket</strong> over the window glass (reflects 90% of radiant heat back into the room). If it gets freezing indoors, set up a small pop-up camping tent—or drape blankets over 4 dining chairs around your bed—to create a low-ceiling "warmth cocoon" where your own body heat keeps the air 15°F warmer. Wear a knit winter hat to bed!</li>
+        <li><strong>In a Summer Heatwave Blackout:</strong> Move to the lowest floor of your home, block direct sunlight on eastern/southern windows, and place a wet washcloth around the back of your neck and wrists (where major blood vessels run close to the skin) while running a tiny 5-Watt USB fan plugged into your portable power station.</li>
+      </ul>
+
+      <div class="product-card">
+        <div class="product-icon">📻</div>
+        <div class="product-body">
+          <span class="product-badge">★ Official NOAA Alerts + Flashlight + Phone Charger</span>
+          <h4>5. Emergency NOAA Weather Radio (Solar + Hand Crank + USB Power Bank)</h4>
+          <p>Your lifeline when cell towers, internet, and TV fail. Automatically receives official NOAA weather and civil emergency broadcasts. Includes a super-bright LED flashlight, loud SOS siren, and built-in USB battery bank to charge your phone.</p>
+          <a class="affiliate-btn" href="https://www.amazon.com/s?k=Emergency+NOAA+Weather+Radio+Solar+Crank+Cell+Charger&tag=crydante-20" target="_blank">👉 Check Emergency NOAA Radio on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">🔋</div>
+        <div class="product-body">
+          <span class="product-badge">★ 100% Indoor Safe • Powers CPAP, Phones & Lamps</span>
+          <h4>6. Jackery Explorer Portable Power Station (Push-Button Lithium Power)</h4>
+          <p>Safe to keep right beside your bed! Zero gasoline, zero carbon monoxide fumes, and no heavy pull-cords. Features standard 110V AC wall outlets and USB ports to run your CPAP machine, cell phone, tablet, or lamp at the push of a button.</p>
+          <a class="affiliate-btn" href="https://www.amazon.com/s?k=Jackery+Explorer+Portable+Power+Station&tag=crydante-20" target="_blank">👉 Check Portable Power Station on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">💡</div>
+        <div class="product-body">
+          <span class="product-badge">★ Instant Anti-Fall Hallway Protection</span>
+          <h4>7. Automatic Power-Failure Plug-In LED Nightlights (Multi-Pack)</h4>
+          <p>Stay plugged into your wall sockets 24/7. The exact millisecond a blackout hits, they light up your hallway, bedroom, and bathroom automatically—and slide out of the wall to work as rechargeable handheld flashlights.</p>
+          <a class="affiliate-btn" href="https://www.amazon.com/s?k=Rechargeable+Emergency+Light+Bulbs+Power+Outage+Plug+In&tag=crydante-20" target="_blank">👉 View Automatic Outage Lights on Amazon</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         CHAPTER 6
+    =========================================== -->
+    <div class="chapter-break">
+      <div class="chapter-header">
+        <span class="ch-num">Chapter 6 • Medical Autonomy & Prescription Shield</span>
+        <h2>Medications, Cooling Insulin Without Power & Senior First Aid</h2>
+      </div>
+
+      <div class="figure-block">
+        <img src="images/style8-pharmacy.jpg" alt="Senior circling Day 25 on calendar for medication reserve">
+        <div class="figure-caption">Figure 6.1: Using the legal "Day-25 Early Refill Rule" allows seniors to build a multi-week emergency buffer of vital prescriptions before supply chains freeze.</div>
+      </div>
+
+      <h3 class="sub-section">6.1 The Legal "Day-25 Refill" Method & Word-for-Word Doctor Script</h3>
+      <p>Today, over 80% of generic prescription ingredients are manufactured overseas. During severe storms, port strikes, or global crises, local pharmacies run out of common blood pressure, heart, thyroid, and diabetes medications within 72 hours. You must build a <strong>30-to-90 day buffer</strong> today using two completely legal methods:</p>
+      <ul>
+        <li><strong>Method 1 — The "Day-25 Insurance Window":</strong> Almost all Medicare Part D and private insurance plans permit a 30-day non-controlled maintenance prescription to be refilled when <strong>80% of the days have elapsed (Day 24 or Day 25)</strong>. Circle Day 25 on your calendar every month and pick up your refill 5 days early. Do NOT start taking the new bottle until your old bottle is completely empty! In just 4 months, you will have accumulated a <strong>20-to-24 day emergency reserve</strong> at zero extra cost.</li>
+        <li><strong>Method 2 — The 90-Day Mail-Order / Vacation Override Script:</strong> At your next appointment, say this exact sentence to your doctor:
+          <br><em>"Doctor, I live alone far from my children, and I worry about being snowed in or facing pharmacy delays. Could you write my maintenance blood pressure and heart prescriptions as 90-day fills, or write a separate cash-pay prescription for a 30-day emergency backup bottle that I can fill at a discount pharmacy?"</em> (Using free discount cards like GoodRx or CostPlusDrugs, a 30-day backup bottle of common blood pressure or statin pills often costs less than $8 to $12 out-of-pocket!).</li>
+      </ul>
+
+      <h3 class="sub-section">6.2 How to Keep Insulin & Eye Drops Cool for 14 Days Without a Fridge</h3>
+      <p>If the power grid goes down in the summer and you use insulin, glaucoma eye drops, or biologic injections, how do you protect them when the refrigerator warms up? <strong>Never put insulin directly on ice packs</strong> (freezing destroys insulin molecules instantly!).</p>
+      <ol>
+        <li><strong>FDA Room-Temperature Rule:</strong> Most opened insulin vials and pens remain stable at normal room temperature (up to 77°F–86°F / 25°C–30°C) for <strong>28 days</strong>. However, if your home exceeds 85°F during a summer blackout, you need passive evaporative cooling.</li>
+        <li><strong>The Evaporative Water-Crystal Pouch (FRIO Method) or Clay Pot Cooler:</strong> An evaporative insulin wallet contains non-toxic polymer crystals. You soak the pouch in plain tap water for 5 minutes; as the water slowly evaporates through the fabric over 48 hours, it draws heat out, keeping insulin at a safe 64°F–78°F without a single watt of electricity! Alternatively, place your medication inside a sealed Ziploc bag inside an unglazed terracotta clay flowerpot sitting in a shallow bowl of water covered with a wet washcloth.</li>
+      </ol>
+
+      <div class="recipe-box">
+        <h4>🩺 Life-Saving Formula: World Health Organization (WHO) Homemade Oral Rehydration Solution</h4>
+        <p>If you run out of commercial electrolyte packets during a bout of stomach flu, diarrhea, or extreme heat, mix these 3 kitchen ingredients with 100% precision:</p>
+        <ul style="margin-bottom:0;">
+          <li><strong>1 Liter (4 cups)</strong> of clean, filtered drinking water</li>
+          <li><strong>6 Level Teaspoons of Sugar</strong> (or honey — glucose is required for the intestines to absorb sodium and water!)</li>
+          <li><strong>1/2 Level Teaspoon of Table Salt</strong> (Do NOT add extra salt; too much salt worsens dehydration). Sip 1/2 cup every 30 minutes.</li>
+        </ul>
+      </div>
+
+      <h3 class="sub-section">6.3 Overlooked Senior Emergencies: Dental, Glasses & Hearing Aids</h3>
+      <ul>
+        <li><strong>Lost Filling or Loose Crown:</strong> Biting on a hard cracker or nut during a crisis can pop off a dental crown, exposing a raw nerve when dentists are closed. Keep a $6 tube of <strong>Over-the-Counter Temporary Dental Cement (such as Dentemp)</strong> inside your first aid kit—you simply roll a tiny ball with your finger and press the crown right back into place!</li>
+        <li><strong>Spare Eyeglasses & Hearing Aid Batteries:</strong> If your only pair of glasses breaks during a blackout, you are functionally blind in your own home. Always keep your <strong>previous prescription glasses</strong> (plus two $5 pairs of reading magnifiers) and a <strong>60-pack of Zinc-Air Hearing Aid Batteries</strong> (keep the sticky tabs on until use—they last 3 years sealed!) inside your nightstand.</li>
+      </ul>
+
+      <div class="product-card">
+        <div class="product-icon">🧰</div>
+        <div class="product-body">
+          <span class="product-badge">★ Complete Trauma & Thermal Protection</span>
+          <h4>8. 300-Piece First Aid Kit + Mylar Thermal Emergency Blankets</h4>
+          <p>Organized zippered medical case stocked with sterile gauze, non-stick pads for thin senior skin tears, antiseptic wipes, trauma shears, burn gel, and silver Mylar thermal blankets that retain 90% of body heat.</p>
+          <a class="affiliate-btn" href="https://www.amazon.com/s?k=First+Aid+Kit+300+Piece+Emergency+Survival+Blanket&tag=crydante-20" target="_blank">👉 View Complete First Aid Kit on Amazon</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         CHAPTER 7
+    =========================================== -->
+    <div class="chapter-break">
+      <div class="chapter-header">
+        <span class="ch-num">Chapter 7 • Solo Home Defense & Scam Shield</span>
+        <h2>Fortifying Your Home Alone & Stopping Blackout Scammers</h2>
+      </div>
+
+      <div class="figure-block">
+        <img src="images/style4-security.jpg" alt="Bracing front door with security bar against fake utility worker">
+        <div class="figure-caption">Figure 7.1: Never open your door to unannounced "utility workers" during an outage. Wedge an adjustable steel security bar under the interior knob in 3 seconds.</div>
+      </div>
+
+      <h3 class="sub-section">7.1 The Psychology of "Occupied Home" Deterrence</h3>
+      <p>Opportunistic criminals and looters during prolonged blackouts look for easy, quiet targets where a senior appears to live alone. You can make your home look protected by two strong adults in 60 seconds:</p>
+      <ul>
+        <li><strong>The Size-13 Work Boot Trick:</strong> Buy a worn pair of Men's Size-13 work boots at a thrift store for $5, rub a little dirt on the soles, and leave them sitting visibly right outside your front door next to a large metal dog bowl. Intruders immediately assume a large man and a guard dog live inside.</li>
+        <li><strong>Sound Deterrence:</strong> Keep a small battery radio tuned to a talk-radio station playing at moderate volume near your front foyer so voices can be heard if someone approaches the porch.</li>
+      </ul>
+
+      <h3 class="sub-section">7.2 The 3-Minute No-Drill Physical Fortification Protocol</h3>
+      <ol>
+        <li><strong>Front & Back Hinged Doors:</strong> Standard deadbolts only extend 1 inch into a thin wooden doorframe that can be kicked in. An <strong>Adjustable Steel Door Security Bar</strong> wedges at a 45-degree angle between the floor and the underside of your doorknob. The harder someone pushes from outside, the tighter the rubber foot grips your floor—withstanding up to 400 pounds of force with zero screws or drilling.</li>
+        <li><strong>Sliding Glass Patio Doors:</strong> Sliding door latches are notoriously weak. Measure the bottom track of your sliding door, cut a thick 1.5-inch wooden closet rod (or broom handle) to that exact length, and drop it into the bottom track so the glass door physically cannot slide open.</li>
+        <li><strong>Bedside 130dB Personal Panic Siren:</strong> If you hear someone tampering with a window or if you suffer a fall inside your home when phone lines are down, pull the pin on a <strong>130-decibel Personal SOS Siren</strong>. At 130dB (as loud as a military jet engine), it triggers instant panic in intruders and alerts neighbors up to 3 houses away.</li>
+      </ol>
+
+      <h3 class="sub-section">7.3 The 4 Crisis Scams That Target Seniors Living Alone</h3>
+      <div class="callout-danger">
+        <strong>NEVER FALL FOR THESE 4 EMERGENCY SCAMS:</strong><br>
+        <strong>1. The "Gas/Electric Inspector" Door Knock:</strong> Criminals put on yellow reflective vests during blackouts and knock on seniors' doors claiming they need to "check your basement breaker or gas pipes." <strong>Never unlock your door.</strong> Speak through the closed door: <em>"My son is resting in the back bedroom; we do not need service."</em><br>
+        <strong>2. The "Mandatory Paid Evacuation" Scam:</strong> Official police or firefighters will NEVER charge money at your door to evacuate you or restore your power.<br>
+        <strong>3. Storm-Chaser Roof/Tree Scammers:</strong> Never pay cash upfront to strangers knocking after a storm claiming a tree limb damaged your roof.<br>
+        <strong>4. The "Grandchild in Trouble" AI Voice Call:</strong> Agree on a secret family password word with your children and grandchildren today. If anyone calls claiming a relative is in jail or the hospital needing money, ask for the secret password!
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">🚨</div>
+        <div class="product-body">
+          <span class="product-badge">★ Ear-Piercing 130dB Siren + LED Strobe</span>
+          <h4>9. Personal SOS Safety Siren Alarm (Keychain & Bedside Panic Pin)</h4>
+          <p>Requires zero hand strength: simply pull the pin to unleash a 130dB alarm heard up to 1,000 feet away. Scares off intruders instantly and summons neighbors if you fall when cell phones are down.</p>
+          <a class="affiliate-btn" href="https://www.amazon.com/s?k=Personal+Safety+Alarm+Seniors+130dB+Siren+LED&tag=crydante-20" target="_blank">👉 View Personal SOS Siren on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">🚪</div>
+        <div class="product-body">
+          <span class="product-badge">★ 400-Lb Force Resistance • Installs in 3 Seconds</span>
+          <h4>10. Heavy-Duty Adjustable Door Security Bar (Hinged & Sliding Doors)</h4>
+          <p>Heavy-gauge steel bar wedges tightly under your doorknob or inside your sliding patio door track without tools or drilling. Essential peace of mind for seniors sleeping alone.</p>
+          <a class="affiliate-btn" href="https://www.amazon.com/s?k=Adjustable+Door+Security+Bar+Stopper+Home+Defense&tag=crydante-20" target="_blank">👉 Check Door Security Bar on Amazon</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         CHAPTER 8
+    =========================================== -->
+    <div class="chapter-break">
+      <div class="chapter-header">
+        <span class="ch-num">Chapter 8 • Emergency Sanitation & Hygiene</span>
+        <h2>Dry-Flush Toilet Engineering & Infection Control When Pipes Stop</h2>
+      </div>
+
+      <div class="figure-block">
+        <img src="images/style5-toilet.jpg" alt="Never flush drinking water; use absorbent coagulating gel">
+        <div class="figure-caption">Figure 8.1: Never waste precious drinking water flushing a toilet tank. Line your standard toilet bowl and use medical-grade coagulating gel powder.</div>
+      </div>
+
+      <h3 class="sub-section">8.1 Why You Must Never Pour Drinking Water Into Your Toilet Tank</h3>
+      <p>A standard residential toilet consumes <strong>1.6 to 3.5 gallons (6 to 13 liters) of water per flush</strong>. If you use your emergency drinking water to flush the toilet just 3 times a day, you will burn through 30 days of life-saving drinking water in less than 72 hours!</p>
+      <p>Even worse, many survival books tell people to "squat over a 5-gallon plastic hardware bucket." For a senior over 65 with knee replacements, hip pain, or balance issues, sitting on a narrow, unstable plastic bucket in the dark is a recipe for a dangerous fall and a humiliating mess.</p>
+
+      <h3 class="sub-section">8.2 The "Normal Toilet Seat" Dry-Flush Protocol (Step-by-Step)</h3>
+      <p>You can continue using your own comfortable, sturdy porcelain toilet seat—and your existing bathroom grab bars—without using a single drop of water:</p>
+      <ol>
+        <li><strong>Step 1 (Shut Off the Toilet Valve):</strong> Turn the small silver water valve on the wall behind the bottom of your toilet clockwise until it stops, or tape the flush handle down with duct tape so you don't flush out of habit.</li>
+        <li><strong>Step 2 (Double-Bag the Bowl):</strong> Lift the toilet seat (and lid). Place a regular heavy-duty trash bag inside the porcelain bowl as a protective outer shield, and place a <strong>Medical Commode Liner Bag</strong> over it. Lower the comfortable toilet seat back down over the edges of the bag.</li>
+        <li><strong>Step 3 (Add Coagulating Gel Powder):</strong> Toss 1 small scoop (or 1 pre-measured packet) of <strong>Super-Absorbent Coagulating Gel Powder</strong> into the bag. The moment liquid hits the powder, it chemically bonds into a solid, lemon-scented, spill-proof gel within 15 seconds—eliminating 100% of splashes and odors!</li>
+        <li><strong>Step 4 (Disposal):</strong> After use, simply pull the drawstring closed, tie a knot, and place the sealed pouch inside a covered outdoor trash can or balcony bin until municipal service resumes. (<em>Backup Household Hack:</em> If you ever run out of gel packets, a 50/50 mixture of <strong>clumping cat litter and baking soda</strong> absorbs liquids and neutralizes odors effectively).</li>
+      </ol>
+
+      <h3 class="sub-section">8.3 Preventing UTIs and Skin Infections Without a Shower</h3>
+      <p>In older adults, going days without washing during a water outage frequently leads to <strong>Urinary Tract Infections (UTIs)</strong>—which in seniors can rapidly progress to sepsis or acute confusion. Keep two packs of <strong>Hospital-Grade No-Rinse Foaming Body Wipes (Chlorhexidine or Aloe-enriched)</strong> in your bathroom. Using just 4 thick wipes cleans your entire body from head to toe without needing a single drop of rinse water.</p>
+
+      <div class="product-card">
+        <div class="product-icon">🧼</div>
+        <div class="product-body">
+          <span class="product-badge">★ Zero Odors • Fits Your Regular Toilet Seat</span>
+          <h4>11. Emergency Toilet Commode Liner Bags with Absorbent Gel Powder</h4>
+          <p>Turns your regular home toilet into a clean, odorless waterless toilet during outages. Each pre-treated bag solidifies up to 32 ounces of liquid waste into a deodorized gel in seconds.</p>
+          <a class="affiliate-btn" href="https://www.amazon.com/s?k=Emergency+Toilet+Bags+Absorbent+Gel+Commode+Liners&tag=crydante-20" target="_blank">👉 Check Emergency Toilet Liners on Amazon</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         CHAPTER 9
+    =========================================== -->
+    <div class="chapter-break">
+      <div class="chapter-header">
+        <span class="ch-num">Chapter 9 • Financial Shield, Documents & Companion Pets</span>
+        <h2>Emergency Cash Strategy, Fireproof Records & Pet Survival</h2>
+      </div>
+
+      <div class="figure-block">
+        <img src="images/style7-flatlay.jpg" alt="Senior emergency flat-lay kit with small bills in fireproof pouch">
+        <div class="figure-caption">Figure 9.1: A complete senior emergency tabletop kit—featuring a fireproof cash pouch with small $1 and $5 bills, LifeStraw filter, NOAA radio, one-touch can opener, SOS siren, and 90-day pill organizer.</div>
+      </div>
+
+      <h3 class="sub-section">9.1 Why $100 Bills Are Useless in a Blackout (The Small-Bill Matrix)</h3>
+      <p>During the 2003 Northeast Blackout, the Texas winter grid collapse, and the recent Spain/Portugal grid outages, electronic credit card terminals, Apple Pay, and bank ATMs went offline within 60 seconds. Local bakeries, pharmacies, and neighbors could only accept <strong>physical paper cash</strong>.</p>
+      <p>However, there is a catch: when cash registers have no power and banks are closed, <strong>merchants have no change!</strong> If a loaf of bread and a gallon of milk cost $9 and you hand the store clerk a $50 or $100 bill, you will either lose $41 or be turned away empty-handed.</p>
+
+      <table class="prep-table">
+        <thead>
+          <tr>
+            <th>Bill Denomination</th>
+            <th>Recommended Count</th>
+            <th>Total Value ($300 Reserve)</th>
+            <th>Why You Need This Exact Breakdown</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>$1 Bills</strong></td>
+            <td>40 bills</td>
+            <td>$40</td>
+            <td>Exact payment for water, bread, or local items without needing change.</td>
+          </tr>
+          <tr>
+            <td><strong>$5 Bills</strong></td>
+            <td>22 bills</td>
+            <td>$110</td>
+            <td>The #1 most useful bill for small pharmacy co-pays, fuel, or neighbor help.</td>
+          </tr>
+          <tr>
+            <td><strong>$10 & $20 Bills</strong></td>
+            <td>5 x $10 + 5 x $20</td>
+            <td>$150</td>
+            <td>For larger grocery bundles or emergency local repairs.</td>
+          </tr>
+          <tr>
+            <td><strong>Quarter Coins (Roll)</strong></td>
+            <td>1 roll ($10)</td>
+            <td>$10</td>
+            <td>For coin-operated laundry machines or vending machines.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 class="sub-section">9.2 Three Clever Places to Hide Cash (Where Burglars Never Look)</h3>
+      <p>Never hide emergency cash inside your bedroom sock drawer, jewelry box, or under the mattress—those are the very first places intruders search in 30 seconds. Instead, divide your cash into two locations:</p>
+      <ol>
+        <li><strong>Location 1 (Inside Your Fireproof Grab-and-Go Bag):</strong> Keep half of your cash zipped inside your fireproof document bag alongside your ID, Medicare card, property deed, insurance policy numbers, and a <strong>written paper list of your family's phone numbers</strong>.</li>
+        <li><strong>Location 2 (The "Empty Prune Can" Decoy in the Pantry):</strong> Take an empty cardboard canister of oatmeal or an empty box of prunes/laxatives on your waist-high pantry shelf, place a sealed envelope of small bills at the bottom, and fill the top with real oats or prunes. No burglar in history has ever stolen a senior's box of prunes!</li>
+      </ol>
+
+      <h3 class="sub-section">9.3 Complete 90-Day Companion Pet Protocol (Dogs & Cats)</h3>
+      <p>For millions of seniors living alone, a dog or cat is family—and your most loyal emotional support during a crisis. Never let an emergency force you to choose between feeding yourself and feeding your pet:</p>
+      <ul>
+        <li><strong>Water & Food Math for Pets:</strong> A 20-pound dog or cat needs roughly 1/2 liter of drinking water per day. Keep <strong>two extra 15-lb bags of dry kibble</strong> stored inside an airtight plastic bin with a scoop at waist height, plus 24 pull-tab cans of wet pet food.</li>
+        <li><strong>Indoor Potty Station for Storms/Blackouts:</strong> If you live in an apartment building and the elevator dies during a blackout (or if ice storms make walking your dog outside a severe fall hazard), keep a pack of <strong>Absorbent Puppy Training Pee Pads</strong> (or a low-sided plastic tray with artificial turf/cat litter) in your utility room so your dog can relieve itself safely indoors!</li>
+        <li><strong>Emergency Pet Guardianship Note:</strong> Write on your Fridge Crisis Sheet the name and phone number of a trusted neighbor or relative who has agreed to care for your pet if you ever require medical transport.</li>
+      </ul>
+
+      <div class="product-card">
+        <div class="product-icon">📁</div>
+        <div class="product-body">
+          <span class="product-badge">★ Withstands 2000°F Fire & Water Immersion</span>
+          <h4>12. Fireproof & Waterproof Document & Emergency Cash Bag</h4>
+          <p>Double-layered silicone-coated fiberglass pouch protects your small-bill cash reserve, passport, house deed, Medicare cards, and prescription lists from fire and floods. Includes reflective strips to spot easily in the dark.</p>
+          <a class="affiliate-btn" href="https://www.amazon.com/s?k=Fireproof+Document+Bag+Waterproof+Money+Pouch&tag=crydante-20" target="_blank">👉 View Fireproof Document Bag on Amazon</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         CHAPTER 10
+    =========================================== -->
+    <div class="chapter-break">
+      <div class="chapter-header">
+        <span class="ch-num">Chapter 10 • Distant-Family Protocol & Master Directory</span>
+        <h2>The SMS Check-In Code, Printable Fridge Sheet & Complete Gear Index</h2>
+      </div>
+
+      <h3 class="sub-section">10.1 Why Voice Calls Fail & How SMS Text Codes Slip Through</h3>
+      <p>When a regional emergency occurs, everyone tries to call their parents and grandparents at the exact same second. Voice calls require a continuous, high-bandwidth circuit on cell towers—so voice networks crash within 10 minutes, giving you a "Call Failed" or fast busy signal.</p>
+      <p><strong>Standard SMS Text Messages (not WhatsApp or iMessage, which require internet data, but plain SMS texts)</strong> travel on a tiny control channel packet. Even when 99% of voice calls fail, your phone automatically retries sending that tiny SMS packet until it slips through a tower in a millisecond!</p>
+
+      <div class="callout">
+        <strong>📱 SHARE THIS 3-CODE SMS SYSTEM WITH YOUR CHILDREN TODAY:</strong><br>
+        Establish two fixed daily check-in windows (for example: <strong>8:00 AM and 7:00 PM</strong>). During an outage, turn your phone on for 5 minutes at that exact hour, send one of these 3 codes, and turn the screen back off to save battery:<br>
+        • <code>"OK 1"</code> = I am safe inside at home, doors are braced, and I have plenty of food, water, and medications. Do not worry or drive into danger.<br>
+        • <code>"NEED 2"</code> = Not an immediate medical emergency, but I am running low on a supply or need a neighbor to check on me within 24 hours.<br>
+        • <code>"SOS 3"</code> = Urgent medical or safety issue at my house. Please call local emergency services or send my local neighbor keyholder immediately.
+      </div>
+
+      <h3 class="sub-section">10.2 Printable "Fridge-Door" Solo-Senior Emergency Sheet</h3>
+      <p>Print this page, fill it out clearly in black pen, and tape it to your refrigerator door:</p>
+
+      <div class="emergency-grid">
+        <div class="fill-box">
+          <strong>1. MY FULL NAME, DOB & BLOOD TYPE:</strong>
+          <div class="fill-line"></div>
+          <div class="fill-line"></div>
+        </div>
+        <div class="fill-box">
+          <strong>2. PRIMARY FAMILY CONTACT (Name & Phone):</strong>
+          <div class="fill-line"></div>
+          <div class="fill-line"></div>
+        </div>
+        <div class="fill-box">
+          <strong>3. TRUSTED LOCAL NEIGHBOR / KEYHOLDER:</strong>
+          <div class="fill-line"></div>
+          <div class="fill-line"></div>
+        </div>
+        <div class="fill-box">
+          <strong>4. PRIMARY DOCTOR & PHARMACY PHONE:</strong>
+          <div class="fill-line"></div>
+          <div class="fill-line"></div>
+        </div>
+        <div class="fill-box">
+          <strong>5. DAILY MEDICATIONS & DOSAGE SCHEDULE:</strong>
+          <div class="fill-line"></div>
+          <div class="fill-line"></div>
+          <div class="fill-line"></div>
+        </div>
+        <div class="fill-box">
+          <strong>6. ALLERGIES, MEDICAL DEVICES & PET GUARDIAN:</strong>
+          <div class="fill-line"></div>
+          <div class="fill-line"></div>
+          <div class="fill-line"></div>
+        </div>
+      </div>
+
+      <h3 class="sub-section">10.3 Complete 12-Item Senior Survival Equipment Directory (Amazon Direct)</h3>
+      <p>Click any link below to check current prices and order home delivery directly from Amazon:</p>
+      <table class="prep-table">
+        <thead>
+          <tr>
+            <th>Recommended Senior-Tested Item</th>
+            <th>Core Benefit for Solo Seniors (65+)</th>
+            <th>Direct Amazon Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1. LifeStraw Water Filter</strong></td>
+            <td>Filters 1,000 gallons; zero heavy bottle lifting</td>
+            <td><a href="https://www.amazon.com/s?k=LifeStraw+Personal+Water+Filter+Emergency&tag=crydante-20" target="_blank"><strong>Order on Amazon →</strong></a></td>
+          </tr>
+          <tr>
+            <td><strong>2. WaterBOB Bathtub Bladder</strong></td>
+            <td>Stores 100 gallons in bathtub with hand pump</td>
+            <td><a href="https://www.amazon.com/s?k=WaterBOB+Emergency+Drinking+Water+Storage&tag=crydante-20" target="_blank"><strong>Order on Amazon →</strong></a></td>
+          </tr>
+          <tr>
+            <td><strong>3. ReadyWise 25-Year Food Bucket</strong></td>
+            <td>Featherlight pouches; 25-year shelf life</td>
+            <td><a href="https://www.amazon.com/s?k=ReadyWise+Emergency+Food+Supply+Freeze+Dried&tag=crydante-20" target="_blank"><strong>Order on Amazon →</strong></a></td>
+          </tr>
+          <tr>
+            <td><strong>4. Kitchen Mama One-Touch Opener</strong></td>
+            <td>Opens cans with 1 button press (Arthritis aid)</td>
+            <td><a href="https://www.amazon.com/s?k=Kitchen+Mama+Electric+Can+Opener+Battery&tag=crydante-20" target="_blank"><strong>Order on Amazon →</strong></a></td>
+          </tr>
+          <tr>
+            <td><strong>5. Solar + Crank NOAA Radio</strong></td>
+            <td>Official emergency alerts + LED + USB charger</td>
+            <td><a href="https://www.amazon.com/s?k=Emergency+NOAA+Weather+Radio+Solar+Crank+Cell+Charger&tag=crydante-20" target="_blank"><strong>Order on Amazon →</strong></a></td>
+          </tr>
+          <tr>
+            <td><strong>6. Jackery Indoor Power Station</strong></td>
+            <td>Push-button indoor power for CPAP & phones</td>
+            <td><a href="https://www.amazon.com/s?k=Jackery+Explorer+Portable+Power+Station&tag=crydante-20" target="_blank"><strong>Order on Amazon →</strong></a></td>
+          </tr>
+          <tr>
+            <td><strong>7. Automatic Outage Nightlights</strong></td>
+            <td>Turn on automatically the second power fails</td>
+            <td><a href="https://www.amazon.com/s?k=Rechargeable+Emergency+Light+Bulbs+Power+Outage+Plug+In&tag=crydante-20" target="_blank"><strong>Order on Amazon →</strong></a></td>
+          </tr>
+          <tr>
+            <td><strong>8. 300-Piece First Aid + Thermal Kit</strong></td>
+            <td>Complete wound care + 90% heat-retention blankets</td>
+            <td><a href="https://www.amazon.com/s?k=First+Aid+Kit+300+Piece+Emergency+Survival+Blanket&tag=crydante-20" target="_blank"><strong>Order on Amazon →</strong></a></td>
+          </tr>
+          <tr>
+            <td><strong>9. 130dB Personal SOS Siren</strong></td>
+            <td>Summons neighbors up to 1,000 ft away without phone</td>
+            <td><a href="https://www.amazon.com/s?k=Personal+Safety+Alarm+Seniors+130dB+Siren+LED&tag=crydante-20" target="_blank"><strong>Order on Amazon →</strong></a></td>
+          </tr>
+          <tr>
+            <td><strong>10. Adjustable Door Security Bar</strong></td>
+            <td>400-lb force resistance under doorknob (no tools)</td>
+            <td><a href="https://www.amazon.com/s?k=Adjustable+Door+Security+Bar+Stopper+Home+Defense&tag=crydante-20" target="_blank"><strong>Order on Amazon →</strong></a></td>
+          </tr>
+          <tr>
+            <td><strong>11. Emergency Toilet Gel Liners</strong></td>
+            <td>Solidifies waste & odor inside your normal toilet</td>
+            <td><a href="https://www.amazon.com/s?k=Emergency+Toilet+Bags+Absorbent+Gel+Commode+Liners&tag=crydante-20" target="_blank"><strong>Order on Amazon →</strong></a></td>
+          </tr>
+          <tr>
+            <td><strong>12. Fireproof Document & Cash Bag</strong></td>
+            <td>2000°F protection for small bills, deeds & IDs</td>
+            <td><a href="https://www.amazon.com/s?k=Fireproof+Document+Bag+Waterproof+Money+Pouch&tag=crydante-20" target="_blank"><strong>Order on Amazon →</strong></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+</body>
+</html>

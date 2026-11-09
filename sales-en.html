@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alone But Ready™ | The Illustrated 90-Day Senior Self-Reliance Blueprint ($14.90)</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Inter:wght@400;600;700;800&display=swap');
+
+    :root {
+      --green-dark: #071710;
+      --green-main: #1b4332;
+      --amber: #d97706;
+      --amber-bright: #f59e0b;
+      --red-alert: #b91c1c;
+      --cream: #faf8f5;
+      --text-dark: #111827;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      font-size: 21px;
+      line-height: 1.7;
+      color: var(--text-dark);
+      background-color: var(--cream);
+    }
+
+    .top-alert {
+      background: var(--red-alert);
+      color: #fff;
+      text-align: center;
+      padding: 12px 20px;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .lang-bar {
+      background: #040d09;
+      color: #d1d5db;
+      padding: 10px 20px;
+      text-align: right;
+      font-size: 16px;
+    }
+
+    .lang-bar a {
+      color: #fde68a;
+      text-decoration: none;
+      font-weight: 700;
+      margin-left: 15px;
+    }
+
+    .hero {
+      background: linear-gradient(160deg, var(--green-dark) 0%, var(--green-main) 100%);
+      color: #fff;
+      padding: 55px 24px 75px 24px;
+      text-align: center;
+      border-bottom: 8px solid var(--amber);
+    }
+
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    .pre-headline {
+      display: inline-block;
+      background: rgba(245, 158, 11, 0.2);
+      border: 2px solid var(--amber-bright);
+      color: #fde68a;
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-weight: 800;
+      font-size: 16px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-family: 'Merriweather', serif;
+      font-size: 42px;
+      line-height: 1.25;
+      margin: 0 0 22px 0;
+      color: #ffffff;
+    }
+
+    .hero h1 span {
+      color: #fde68a;
+      text-decoration: underline;
+    }
+
+    .hero p.sub {
+      font-size: 22px;
+      color: #e5e7eb;
+      max-width: 740px;
+      margin: 0 auto 34px auto;
+    }
+
+    .hero-showcase {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 32px;
+      align-items: center;
+      text-align: left;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 760px) {
+      .hero-showcase {
+        grid-template-columns: 1fr;
+      }
+      .hero h1 {
+        font-size: 32px;
+      }
+    }
+
+    .book-mockup {
+      background: #081c15;
+      border: 4px solid var(--amber-bright);
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: -12px 16px 35px rgba(0,0,0,0.5);
+      text-align: center;
+    }
+
+    .book-mockup img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 14px;
+    }
+
+    .cta-box {
+      background: #ffffff;
+      color: var(--text-dark);
+      border-radius: 16px;
+      padding: 32px 28px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+      border: 4px solid var(--amber-bright);
+      text-align: center;
+    }
+
+    .price-tag {
+      font-size: 19px;
+      color: #4b5563;
+      margin-bottom: 8px;
+    }
+
+    .price-big {
+      font-size: 52px;
+      font-weight: 900;
+      color: var(--green-main);
+      line-height: 1;
+      margin-bottom: 18px;
+    }
+
+    .btn-checkout {
+      display: block;
+      width: 100%;
+      background: linear-gradient(180deg, #f59e0b 0%, #d97706 100%);
+      color: #fff !important;
+      text-decoration: none;
+      font-size: 23px;
+      font-weight: 900;
+      padding: 20px 24px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(217, 119, 6, 0.45);
+      border: 2px solid #b45309;
+      text-align: center;
+    }
+
+    .guarantee-mini {
+      font-size: 15px;
+      color: #4b5563;
+      margin-top: 14px;
+    }
+
+    .section {
+      padding: 60px 24px;
+    }
+
+    .section-white {
+      background: #ffffff;
+      border-top: 1px solid #e5e7eb;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    h2.section-title {
+      font-family: 'Merriweather', serif;
+      font-size: 34px;
+      color: var(--green-dark);
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 28px;
+      line-height: 1.3;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 30px 0;
+    }
+
+    @media (max-width: 720px) {
+      .photo-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .photo-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 2px solid #d1d5db;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .photo-card div {
+      padding: 16px;
+      font-size: 18px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 700px) {
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .feature-card {
+      background: var(--cream);
+      border: 2px solid #cbd5e1;
+      border-radius: 14px;
+      padding: 24px;
+    }
+
+    .feature-card h3 {
+      margin-top: 0;
+      color: var(--green-main);
+      font-family: 'Merriweather', serif;
+      font-size: 22px;
+    }
+
+    .gear-card {
+      background: #fff;
+      border: 3px solid var(--green-main);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 20px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    @media (max-width: 680px) {
+      .gear-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    .gear-icon {
+      font-size: 48px;
+      background: #ecfdf5;
+      width: 90px;
+      height: 90px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border: 2px solid #10b981;
+    }
+
+    .btn-amazon {
+      display: inline-block;
+      background: #1b4332;
+      color: #fff !important;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 18px;
+      padding: 12px 22px;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    footer {
+      background: var(--green-dark);
+      color: #9ca3af;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="lang-bar">
+    <span>Language: <strong>English (US/UK)</strong></span>
+    <a href="sales-es.html">🇪🇸 Español</a>
+    <a href="ebook-en.html">📖 Preview Illustrated E-Book</a>
+  </div>
+
+  <div class="top-alert">
+    ⚠️ SENIOR PREPAREDNESS SPECIAL: Illustrated 10-Chapter Manual for Older Adults (65+) Living Alone or Far From Family
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="pre-headline">Illustrated Large-Print Edition • 10 Chapters + Printable Crisis Checklists</div>
+      <h1>If the Grid Fails Tonight and Your Children Live Hours Away... <span>How Will You Manage Alone?</span></h1>
+      <p class="sub">Discover the <strong>"Zero-Heavy-Lifting" 90-Day Senior Stockpile System</strong>: how to secure clean water, no-cook food, medications, indoor power, and solo home defense without straining your back or relying on anyone.</p>
+
+      <div class="hero-showcase">
+        <div class="book-mockup">
+          <span style="background:#d97706; color:#fff; font-size:13px; font-weight:800; padding:4px 12px; border-radius:30px; display:inline-block; margin-bottom:10px;">ILLUSTRATED LARGE-PRINT EDITION</span>
+          <h3 style="color:#fff; margin:0 0 12px 0; font-family:'Merriweather',serif; font-size:26px;">ALONE BUT READY™</h3>
+          <img src="images/cover-senior.jpg" alt="Alone But Ready Cover">
+          <p style="font-size:16px; color:#d8f3dc; margin:0;">✔ 10 Illustrated Chapters (20pt Large Print)<br>✔ 30/60/90-Day Pantry Tables & 4-Week Budget Plan<br>✔ Printable Fridge Crisis Sheet Included</p>
+        </div>
+
+        <div class="cta-box">
+          <div class="price-tag">Regular Price: <del>$39.00</del> • Today's Senior Special:</div>
+          <div class="price-big">$14.90</div>
+          <a href="ebook-en.html" class="btn-checkout">
+            👉 GET INSTANT ACCESS NOW ($14.90)
+          </a>
+          <div class="guarantee-mini">
+            🔒 Instant PDF Download • Read on Phone, Tablet, Computer or Print at Home • 30-Day 100% Money-Back Guarantee
+          </div>
+          <ul style="text-align:left; font-size:17px; margin:18px 0 0 0; padding-left:22px; color:#374151;">
+            <li><strong>Bonus 1:</strong> First 60-Minute Blackout Flowchart</li>
+            <li><strong>Bonus 2:</strong> 4-Week Fixed-Income Grocery Calendar</li>
+            <li><strong>Bonus 3:</strong> Fridge-Door Emergency Protocol Sheet</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISUAL CHAPTER PREVIEW -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Designed Specifically for 65+ Hands, Backs & Health Needs</h2>
+      <p style="text-align:center;">Unlike military survival guides that tell you to lift 42-pound water jugs or run into the woods, every page of <strong>Alone But Ready™</strong> is built for comfortable, effortless independence at home:</p>
+
+      <div class="photo-grid">
+        <div class="photo-card">
+          <img src="images/water-storage.jpg" alt="Water storage">
+          <div><strong>1. Zero-Lifting Water:</strong> Store 90 days of pure water at waist height + the 2-oz filter that replaces 4,000 bottles.</div>
+        </div>
+        <div class="photo-card">
+          <img src="images/pantry-food.jpg" alt="Pantry food">
+          <div><strong>2. Arthritis-Friendly Pantry:</strong> Heart-safe, low-sodium foods that require zero cooking and open with 1 button.</div>
+        </div>
+        <div class="photo-card">
+          <img src="images/medications-health.jpg" alt="Medications">
+          <div><strong>3. 90-Day Medication Shield:</strong> How to legally build an extra reserve of critical daily prescriptions.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALL 10 CHAPTERS -->
+  <section class="section section-white">
+    <div class="container">
+      <h2 class="section-title">Everything Inside the 10-Chapter Master Edition</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>⏱️ Ch. 1: The First 60-Minute Crisis Flowchart</h3>
+          <p>The exact 4-step sequence to follow in the first hour of a blackout or water outage so you never panic or fall in the dark.</p>
+        </div>
+        <div class="feature-card">
+          <h3>💧 Ch. 2: Waist-High Water Blueprint</h3>
+          <p>Visual ergonomic storage diagram + how to capture 100 gallons of clean water in your bathtub in 20 minutes with zero lifting.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🥫 Ch. 3 & 4: 90-Day Tables + 4-Week Budget</h3>
+          <p>Exact item-by-item quantity tables for 30, 60, and 90 days, broken down into a calm 4-week grocery calendar for fixed incomes.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🔋 Ch. 5: Blackout & CPAP Indoor Power</h3>
+          <p>How to keep your CPAP, phone, and hallway lights running indoors with push-button lithium power—no gas or toxic fumes.</p>
+        </div>
+        <div class="feature-card">
+          <h3>💊 Ch. 6 & 7: Medications & Solo Home Defense</h3>
+          <p>The "5-Day Early Refill" prescription trick, cooling insulin without power, and fortifying your front door in 3 seconds without drilling.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🧼 Ch. 8, 9 & 10: Sanitation, Cash, Pets & SMS Code</h3>
+          <p>What to do when toilets won't flush, small-bill cash reserves, pet stockpiling, and the Distant-Family SMS Check-In Code.</p>
+        </div>
+      </div>
+
+      <div style="max-width:620px; margin:45px auto 0 auto;" class="cta-box">
+        <div class="price-tag">Complete 10-Chapter Illustrated Manual + Printable Sheets</div>
+        <div class="price-big">$14.90</div>
+        <a href="ebook-en.html" class="btn-checkout">
+          👉 DOWNLOAD THE COMPLETE GUIDE ($14.90)
+        </a>
+        <div class="guarantee-mini">✔ 30-Day 100% Satisfaction Guarantee • Instant Access</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIRECT AMAZON AFFILIATE SHOWCASE -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">⚡ Featured Senior-Tested Emergency Gear (Amazon Direct)</h2>
+      <p style="text-align:center;">Prefer to order the lightweight, one-button emergency supplies featured in our manual right away? Click any item below to check price and home delivery on Amazon:</p>
+
+      <div class="gear-card">
+        <div class="gear-icon">💧</div>
+        <div>
+          <h4 style="margin:0 0 6px 0; font-size:23px;">1. LifeStraw Personal & Home Emergency Water Filter</h4>
+          <p style="margin:0;">Weighs only 2 ounces and filters up to 1,000 gallons of water without batteries or pumping. Never lift heavy water cases again.</p>
+          <a class="btn-amazon" href="https://www.amazon.com/s?k=LifeStraw+Personal+Water+Filter+Emergency&tag=crydante-20" target="_blank">🛒 Check Price on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="gear-card">
+        <div class="gear-icon">📻</div>
+        <div>
+          <h4 style="margin:0 0 6px 0; font-size:23px;">2. Solar + Hand-Crank NOAA Weather Radio + USB Phone Charger</h4>
+          <p style="margin:0;">Receives official emergency broadcasts when TV and cell towers fail. Built-in LED flashlight, SOS siren, and phone power bank.</p>
+          <a class="btn-amazon" href="https://www.amazon.com/s?k=Emergency+NOAA+Weather+Radio+Solar+Crank+Cell+Charger&tag=crydante-20" target="_blank">🛒 Check Price on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="gear-card">
+        <div class="gear-icon">🥫</div>
+        <div>
+          <h4 style="margin:0 0 6px 0; font-size:23px;">3. Kitchen Mama One-Touch Battery Can Opener (Arthritis Aid)</h4>
+          <p style="margin:0;">Opens any food can automatically with one press of a button—zero wrist twisting, zero sharp edges, runs on AA batteries.</p>
+          <a class="btn-amazon" href="https://www.amazon.com/s?k=Kitchen+Mama+Electric+Can+Opener+Battery&tag=crydante-20" target="_blank">🛒 Check Price on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="gear-card">
+        <div class="gear-icon">🔋</div>
+        <div>
+          <h4 style="margin:0 0 6px 0; font-size:23px;">4. Jackery Explorer Push-Button Indoor Power Station</h4>
+          <p style="margin:0;">Safe to keep next to your bed! Powers CPAP machines, phones, and lamps with one button—no gas, no fumes, no pull cords.</p>
+          <a class="btn-amazon" href="https://www.amazon.com/s?k=Jackery+Explorer+Portable+Power+Station&tag=crydante-20" target="_blank">🛒 Check Price on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="gear-card">
+        <div class="gear-icon">🚪</div>
+        <div>
+          <h4 style="margin:0 0 6px 0; font-size:23px;">5. Adjustable 400-Lb Door Security Bar + 130dB SOS Siren</h4>
+          <p style="margin:0;">Fortifies your front door from the inside in 3 seconds without tools or drilling—essential for seniors sleeping alone during blackouts.</p>
+          <a class="btn-amazon" href="https://www.amazon.com/s?k=Adjustable+Door+Security+Bar+Stopper+Home+Defense&tag=crydante-20" target="_blank">🛒 Check Price on Amazon →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Alone But Ready™ Senior Preparedness Project. All Rights Reserved.</p>
+      <p>Amazon Associate Disclosure (ID: crydante-20): As an Amazon Associate, we earn from qualifying purchases at no additional cost to you.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
